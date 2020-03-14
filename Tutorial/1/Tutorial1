@@ -1,0 +1,61 @@
+Video 1: https://www.youtube.com/watch?v=rycsXRO6rpI
+Files referenced can be found in HumanVsZombies/Tutorial/1
+In the Unity Hub, create a new 2D game. 
+Do File -> New Scene, then File -> Save Scenes, call it "BasicMovementAndAnim" and save it in the Scenes folder. 
+You can change the background color of the scene by clicking the Main Camera cube (cubes are under the Hierarchy tab). 
+You can also change the Size of the Main Camera (you'll later see that a bigger number makes the character smaller).
+You can also see that Unity has 3 tabs: Scene, Game, and Asset Store. 
+Click on Game to see the actual game scene and see that the background color has updated. 
+
+You can find a PNG "exampleSpriteSheet.png" in this repository. 
+Right click the Assets folder in Unity and create a new folder in it called "Graphics."
+Click and drag exampleSpriteSheet into the Graphics folder. 
+Click on the image and change the setting Filter Mode to Point (no filter) and the setting Compression to None. Click apply. 
+Also change Sprite Mode to Multiple and click Apply. 
+Then click the Sprite Editor button -> Slice -> Grid By Cell Size. 
+The X and Y Pixel Size will vary by the dimensions of the sprite sheet being used,
+but for exampleSpriteSheet X=188 and Y=205 works. 
+Click Slice then Apply, and exit out of the Sprite Editor. 
+We have multiple sprite images now!
+
+Now switch to the Scene tab, click and drag a single sprite image (I did exampleSpriteSheet_2) to where the camera icon is, 
+and now switch back to the Game tab to see the sprite on the board. 
+For aesthetic purposes, I changed the background color in Main Camera to match the background color of the sprite sheet,
+but ideally when we're actually making the game we're dealing with transparent images. 
+
+Under Assets, create another folder called Scripts. 
+In scripts, right click and create a new C# file, call it something like "BasicMovement."
+See my BasicMovement.cs script in this repository to get a general idea of how to code that. 
+
+Back in Unity, click the exampleSpriteSheet_2 cube, 
+which should have appeared in the Hierarchy under Main Camera when you dragged the image onto the scene. 
+Click and drag your saved C# script to the blank area under the Add Component button, 
+and you should see it appear there.
+Now you can click the Play arrow at the top middle of Unity and move the character around!
+Click the Play arrow again to stop gameplay. 
+
+Click the exampleSpriteSheet_2 cube again and at the top left click Window -> Animation -> Animation. 
+In the resulting window, click the Create button.
+Make a new folder in Assets called Animation, then save the anim file as "RunLeft."
+Select and drag exampleSpriteSheet_0-5 into the Animation window. 
+Change Samples to 12 (if there is no Samples section next to RunLeft, click the options in the top right of the Animation window and check Show Sample Rate).
+Make sure that the animation is set to Loop Time (by going Assets -> Animations -> RunLeft). 
+Then click RunLeft in the Animation window and Create New Clip called "RunRight."
+Repeat above steps, this time using exampleSpriteSheet_6-11. 
+Finally, create another animation called "Idle" and repeat the steps again, this time using exampleSpriteSheet_2. 
+
+Now click the exampleSpriteSheet_2 cube again, then Window -> Animation -> Animator. 
+Right click the Idle box and click Set as Layer Default State. 
+Within the Animator tab, click the Parameter tab, then +, and select Float and name it Horizontal. 
+Left click the Any State box and then click the RunLeft box to create a transition between them. 
+Click the arrow which appears between them, and in the resulting tab uncheck Fixed Duration (under Settings), 
+change Transition Duration to 0, and uncheck Can Transit to Itself. 
+In the same tab under Conditions, click + and make it such that Conditions is less than 0. 
+Then, right click the RunLeft box, and Make Transition to the Exit box. 
+Click the arrow between them, uncheck Has Exit Time, uncheck Fixed Duration, and set Transition Duration to 0. 
+Add the condition that Horizontal be greater than -0.001. 
+Now repeat the above with a transition from Any State to RunRight and RunRight to Exit, with greater and less thans switched,
+that is Conditions greater than 0 and less than 0.001. 
+Click the exampleSpriteSheet_2 cube and drag the Animator component (which has the checked box next to it)
+into the Animator field of the Basic Movement component. 
+Now click the Play arrow and watch the animations of moving the sprite left and right!
