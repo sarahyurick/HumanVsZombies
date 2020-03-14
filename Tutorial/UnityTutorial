@@ -1,6 +1,7 @@
 From this guy's tutorials: https://www.youtube.com/channel/UCp5WDvPDLCkSZWp9hP5xIvQ
 
 Video 1: https://www.youtube.com/watch?v=rycsXRO6rpI
+Files referenced can be found in HumanVsZombies/Tutorial/1
 In the Unity Hub, create a new 2D game. 
 Do File -> New Scene, then File -> Save Scenes, call it "BasicMovementAndAnim" and save it in the Scenes folder. 
 You can change the background color of the scene by clicking the Main Camera cube (cubes are under the Hierarchy tab). 
@@ -62,4 +63,4 @@ into the Animator field of the Basic Movement component.
 Now click the Play arrow and watch the animations of moving the sprite left and right!
 
 Video 2: https://www.youtube.com/watch?v=32VXj5BB7wU&t=5s
-
+Files referenced can be found in HumanVsZombies/Tutorial/2
