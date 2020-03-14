@@ -1,5 +1,6 @@
 From this guy's tutorials: https://www.youtube.com/channel/UCp5WDvPDLCkSZWp9hP5xIvQ
 
+Video 1: https://www.youtube.com/watch?v=rycsXRO6rpI
 In the Unity Hub, create a new 2D game. 
 Do File -> New Scene, then File -> Save Scenes, call it "BasicMovementAndAnim" and save it in the Scenes folder. 
 You can change the background color of the scene by clicking the Main Camera cube (cubes are under the Hierarchy tab). 
@@ -32,3 +33,33 @@ which should have appeared in the Hierarchy under Main Camera when you dragged t
 Click and drag your saved C# script to the blank area under the Add Component button, 
 and you should see it appear there.
 Now you can click the Play arrow at the top middle of Unity and move the character around!
+Click the Play arrow again to stop gameplay. 
+
+Click the exampleSpriteSheet_2 cube again and at the top left click Window -> Animation -> Animation. 
+In the resulting window, click the Create button.
+Make a new folder in Assets called Animation, then save the anim file as "RunLeft."
+Select and drag exampleSpriteSheet_0-5 into the Animation window. 
+Change Samples to 12 (if there is no Samples section next to RunLeft, click the options in the top right of the Animation window and check Show Sample Rate).
+Make sure that the animation is set to Loop Time (by going Assets -> Animations -> RunLeft). 
+Then click RunLeft in the Animation window and Create New Clip called "RunRight."
+Repeat above steps, this time using exampleSpriteSheet_6-11. 
+Finally, create another animation called "Idle" and repeat the steps again, this time using exampleSpriteSheet_2. 
+
+Now click the exampleSpriteSheet_2 cube again, then Window -> Animation -> Animator. 
+Right click the Idle box and click Set as Layer Default State. 
+Within the Animator tab, click the Parameter tab, then +, and select Float and name it Horizontal. 
+Left click the Any State box and then click the RunLeft box to create a transition between them. 
+Click the arrow which appears between them, and in the resulting tab uncheck Fixed Duration (under Settings), 
+change Transition Duration to 0, and uncheck Can Transit to Itself. 
+In the same tab under Conditions, click + and make it such that Conditions is less than 0. 
+Then, right click the RunLeft box, and Make Transition to the Exit box. 
+Click the arrow between them, uncheck Has Exit Time, uncheck Fixed Duration, and set Transition Duration to 0. 
+Add the condition that Horizontal be greater than -0.001. 
+Now repeat the above with a transition from Any State to RunRight and RunRight to Exit, with greater and less thans switched,
+that is Conditions greater than 0 and less than 0.001. 
+Click the exampleSpriteSheet_2 cube and drag the Animator component (which has the checked box next to it)
+into the Animator field of the Basic Movement component. 
+Now click the Play arrow and watch the animations of moving the sprite left and right!
+
+Video 2: https://www.youtube.com/watch?v=32VXj5BB7wU&t=5s
+
