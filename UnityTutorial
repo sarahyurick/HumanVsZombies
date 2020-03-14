@@ -1,0 +1,34 @@
+From this guy's tutorials: https://www.youtube.com/channel/UCp5WDvPDLCkSZWp9hP5xIvQ
+
+In the Unity Hub, create a new 2D game. 
+Do File -> New Scene, then File -> Save Scenes, call it "BasicMovementAndAnim" and save it in the Scenes folder. 
+You can change the background color of the scene by clicking the Main Camera cube (cubes are under the Hierarchy tab). 
+You can also change the Size of the Main Camera (you'll later see that a bigger number makes the character smaller).
+You can also see that Unity has 3 tabs: Scene, Game, and Asset Store. 
+Click on Game to see the actual game scene and see that the background color has updated. 
+
+You can find a PNG "exampleSpriteSheet.png" in this repository. 
+Right click the Assets folder in Unity and create a new folder in it called "Graphics."
+Click and drag exampleSpriteSheet into the Graphics folder. 
+Click on the image and change the setting Filter Mode to Point (no filter) and the setting Compression to None. Click apply. 
+Also change Sprite Mode to Multiple and click Apply. 
+Then click the Sprite Editor button -> Slice -> Grid By Cell Size. 
+The X and Y Pixel Size will vary by the dimensions of the sprite sheet being used,
+but for exampleSpriteSheet X=188 and Y=205 works. 
+Click Slice then Apply, and exit out of the Sprite Editor. 
+We have multiple sprite images now!
+
+Now switch to the Scene tab, click and drag a single sprite image (I did exampleSpriteSheet_2) to where the camera icon is, 
+and now switch back to the Game tab to see the sprite on the board. 
+For aesthetic purposes, I changed the background color in Main Camera to match the background color of the sprite sheet,
+but ideally when we're actually making the game we're dealing with transparent images. 
+
+Under Assets, create another folder called Scripts. 
+In scripts, right click and create a new C# file, call it something like "BasicMovement."
+See my BasicMovement.cs script in this repository to get a general idea of how to code that. 
+
+Back in Unity, click the exampleSpriteSheet_2 cube, 
+which should have appeared in the Hierarchy under Main Camera when you dragged the image onto the scene. 
+Click and drag your saved C# script to the blank area under the Add Component button, 
+and you should see it appear there.
+Now you can click the Play arrow at the top middle of Unity and move the character around!
