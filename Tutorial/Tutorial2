@@ -1,0 +1,42 @@
+Video 2: https://www.youtube.com/watch?v=32VXj5BB7wU&t=5s
+Files referenced can be found in HumanVsZombies/Tutorial/2
+Input the BasicMovement.png which contains 36 images. 
+From tutorial 1: Click on the image and change the setting Filter Mode to Point (no filter) and the setting Compression to None.
+Click apply. Also change Sprite Mode to Multiple and click Apply. 
+Then click the Sprite Editor button -> Slice -> Grid By Cell Size. 
+The X and Y Pixel Size will vary by the dimensions of the sprite sheet being used,
+but for this one X=77 and Y=77 works. 
+Click Slice then Apply, and exit out of the Sprite Editor. 
+
+From tutorial 1: Click the BasicMovement_2 cube again and at the top left click Window -> Animation -> Animation. 
+Click RunLeft in the Animation window and Create New Clip in the Animations folder called "RunLeftDown."
+Select and drag BasicMovement_12-17 into the Animation window, and change Samples to 12.
+Make sure that the animation is set to Loop Time. 
+(There might be size inconsistencies from the images used in tutorial 1.
+Simply replace the images from tutorial 1 with the images from this new sprite sheet
+by clicking and dragging images 0-5 into RunLeft and 6-11 into RunRight.)
+Also repeat this process by creating animations RunRightDown (with images 18-23), RunLeftUp (with images 24-29), and RunRightUp (with images 30-35).
+
+Go to the Animator tab and delete the RunLeft, RunRight, RunLeftDown, RunRightDown, RunLeftUp, and RunRightUp boxes. 
+Right click -> Create State -> From New Blend Tree. 
+Rename it to "Run" and double click the box. 
+Click the Blend Tree box and make sure that its Blend Type is 1D.
+In the Motion list, click + and Add Motion Field. Click the circle in the field and select the RunLeft animation.
+Repeat the above step and select the RunRight animation.
+
+Add a second Float and call it "Vertical."
+Remove RunLeft and RunRight from the Motion list by selecting each and clicking - for each.
+Change the Blend Type to 2D Simple Directional. 
+Add the animations to the Motion list in this order: RunRight, RunRightUp, RunLeftUp, RunLeft, RunLeftDown, RunRightDown.
+Set the second Parameter to Vertical. 
+Set the Pos X and Pos Y for each motion: RunRight is (1,0), RunRightUp is (0.5,0.866), RunLeftUp is (-0.5,0.866),
+RunLeft is (-1,0), RunLeftDown is (-0.5,-0.866), and RunRightDown is (0.5,-0.866). 
+Create another Float and call it "Magnitude."
+Go back to the Base Layer of the Animator, right click Idle and Make Transition to Run.
+Click on the arrow which appears between them, uncheck Has Exit Time, uncheck Fixed Duration, and set Transition Duration to 0. 
+Click the + to add a condition to the Conditions list, make the condition Magnitude greater than 0.
+Then Make Transition from Run to Idle, uncheck Has Exit Time, uncheck Fixed Duration, and set Transition Duration to 0.
+Add the condition Magnitude less than 0.001 to it. 
+
+See the updated BasicMovement.cs script in folder 2 of this repository.
+You should be able to click the Play arrow and watch the sprite animations as you move it around!
