@@ -130,4 +130,11 @@ See updated C# script in HumanVsZombies/Tutorial/4
 
 
 Video 5: https://www.youtube.com/watch?v=W0R7VcMXiwI
+This video was just a tutorial about how to use walking and running animations simultaneously. 
+I don't really care about having our guy do that. 
+The only thing I did was change the type of the Run blend tree from 2D Simple Directional to 2D Freeform Directional. 
+
+
+
+Video 6: https://www.youtube.com/watch?v=WdqCbydJ8xk
 
