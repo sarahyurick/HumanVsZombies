@@ -114,3 +114,20 @@ This video was just a tutorial about how to use Aseprite, which is a software fo
 The software itself is a $15 purchase, which isn't bad, but we might just want to animate our Spartan some other way. 
 Regardless, I found that the older version of Asesprite is available for free: https://www.aseprite.org/older-versions/
 
+
+
+Video 4: https://www.youtube.com/watch?v=TqXHlTeyvgo
+Go to Edit -> Project Settings -> Input
+Add a new input to Axes by changing 18 to 19. 
+Change the name of the new input, which appears at the bottom of the list, to MoveHorizontal. 
+(For joystick) Delete all text from all other fields, change Gravity to 1, Dead to 0.2, and Sensitivity to 1.
+Set Type to Joystick Axis and Axis to X axis. 
+Increment the size of Axes from 19 to 20, change the name of the new axis to MoveVertical, Axis to Y axis, and check Invert. 
+Increment to size of Axes from 20 to 21, change the name to Fire, set Positive Button to joystick button 1, 
+set Gravity and Sensitivity to 1000, and Dead to 0.001. 
+See updated C# script in HumanVsZombies/Tutorial/4
+
+
+
+Video 5: https://www.youtube.com/watch?v=W0R7VcMXiwI
+
