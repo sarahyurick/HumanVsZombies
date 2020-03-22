@@ -137,4 +137,14 @@ The only thing I did was change the type of the Run blend tree from 2D Simple Di
 
 
 Video 6: https://www.youtube.com/watch?v=WdqCbydJ8xk
+Add CrossHair.PNG to Assets/Graphics/Archer, change Filter Mode to Point (no filter) and Compression to None. 
+Drag the CrossHair image onto the scene, and then under Hierarchy drag the CrossHair cube on top of BasicMovement_2. 
+See PlayerController.cs which now replaces BasicMovement.cs. 
+In the BasicMovement_2 cube inspector (which opens when you click the BasicMovement_2 cube), 
+drag the CrossHair cube (which is a child of BasicMovement_2) to the Cross Hair field under the Player Controller (Script) section.
+When you press play, you should be able to aim the cross hair!
+
+
+
+Video 7: https://www.youtube.com/watch?v=qMRrRQ587qQ
 
