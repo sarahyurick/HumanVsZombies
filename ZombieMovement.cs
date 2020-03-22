@@ -1,3 +1,4 @@
+// Originally from https://answers.unity.com/questions/552674/make-a-character-walk-around-randomly.html
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
