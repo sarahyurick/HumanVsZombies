@@ -167,3 +167,19 @@ This video was just about making sprite sheets for the sprite holding a weapon a
 
 
 Video 10: https://www.youtube.com/watch?v=XWDXZeVODxQ
+Part 1 of how to animate the player running and aiming simultaneously. 
+Should use later, but we definitely don't have the sprite sheets for those yet. 
+
+
+
+Video 11: https://www.youtube.com/watch?v=aXtd5KFf_iE
+Part 2 of how to animate the player running and aiming simultaneously. 
+Go to the Animator tab and add 4 new parameters: a Bool called Aim, and 3 floats called AimHorizontal, AimVertical, and AimMagnitude.
+Add Holding.PNG to Assets/Graphics/Archer, set Filter Mode to Point (no filter), Compression to None, and splice the image. 
+Click the BasicMovement_2 cube again and at the top left click Window -> Animation -> Animation. 
+Following similar steps from tutorials 1 and 2, create anim files AimLeft, AimRight, AimLeftDown, AimRightDown, AimLeftUp, AimRightUp.
+using Holding_0-5, 6-11, 12-17, 18-23, 24-29, 30-35, changing Samples to 12 each time. 
+
+
+
+Video 12: 
