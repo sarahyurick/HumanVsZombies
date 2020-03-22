@@ -252,4 +252,24 @@ Overview of everything from previous videos. See updated PlayerMovement.cs scrip
 
 
 Video 20: https://www.youtube.com/watch?v=8uD2ATIot0A
+Overview of aiming and shooting stuff from previous videos.
+Contains some extra information that could be useful if we want to get nit-picky about those animations. 
 
+
+
+Video 21: https://www.youtube.com/watch?v=vLIOpae8uAc
+To make it a 2-game, you can make BasicMovement_2 a Prefab to create a new player. 
+I didn't do that and instead created a new cube with the "Zombie" images, following the same general steps as with other sprite sheets.
+Like before, Zombie animations will have to be made with the Zombie sprite sheet. 
+The Zombie Movement (Script) in the Zombie cube should use the ZombieMovement.cs script from this respository. 
+Add Component button and search to add Rigidbody 2D. Change Gravity Scale to 0 and check Freeze Rotation Z.
+Drag the Rigidbody 2D component into the Rb parameter under Zombie Movement (Script).
+Add a Circle Collider 2D component to the Zombie cube. Set the Radius=0.3 and Offset X=0.005 and Y=-0.095 as necessary.
+Make Zombie a Prefab by dragging it into the Prefab folder. Then create as many duplicates as you want!
+In the Arrow Prefab, delete its Rigidbody 2D component, add a New script component called Arrow, and add the script to the Scripts folder. 
+In the cubes, Add Tags Archers, Trees, and Zombies and assign the tags accordingly. 
+See updated PlayerController.cs script and new Arrow.cs script. 
+
+
+
+Video 22: https://www.youtube.com/watch?v=o6I2HdGxhME
