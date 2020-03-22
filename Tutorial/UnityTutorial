@@ -231,3 +231,20 @@ Drag the Tree cube into the Prefabs folder.
 
 
 Video 16: https://www.youtube.com/watch?v=Cry7FOHZGN4
+Add a Box Collider 2D component to Tree. Set its Size to X=0.2 and Y=0.04, and Offset to X=0 and Y=0.2. 
+Add a Rigidbody 2D component to Tree. Set its Body Type to Kinematic and click the Apply button. 
+Add a Circle Collider 2D component to the BasicMovement_2 cube. Set the Radius=0.3 and Offset X=0.005 and Y=-0.095 as necessary. 
+Add a Rigidbody 2D component to BasicMovement_2 and set Gravity Scale to 0. 
+See updated PlayerController.cs script. 
+In the BasicMovement_2 inspector, drag the Rigidbody 2D component into the Rb parameter under Player Controller (Script).
+Under Rigidbody 2D Constraints, check Freeze Rotation Z. 
+See video for adding Composite Collider 2D when objects are right next to each other. 
+
+
+
+Videos 17 and 18 are more sprite designing tutorials on Asesprite. 
+
+
+
+Video 19: https://www.youtube.com/watch?v=yfsqai3ivyA
+
