@@ -183,7 +183,7 @@ In the Animator tab, delete the resulting AimLeft, etc. boxes and make a copy of
 Click on the Aim box to open its inspector, click on its Blend Tree, and replace RunLeft with AimLeft, etc. 
 Also change the Parameters to AimHorizontal and AimVertical. 
 Go back to the Base Layer and add a transition from Any State to Aim. Uncheck Fixed Duration, set Transition Duration to 0, and uncheck Can Transition to Self. 
-Add conditions that AimMagnitude greater than 0. 
+Add conditions that Aim is true and AimMagnitude greater than 0. 
 Back in the Base Layer, create a transition from Aim to Exit. Uncheck Has Exit Time and Fixed Duration, and set Transition Duration to 0. 
 Add the condition that Aim is false. 
 See updated PlayerController.cs script. 
@@ -191,4 +191,24 @@ Uncheck Loop Time on all Aiming animations.
 
 
 
-Video 12: 
+Video 12: https://www.youtube.com/watch?v=lh3uam5VUaQ
+How to do a firing animation. Could be a good reference for State Machines. 
+
+
+
+Video 13: https://www.youtube.com/watch?v=lh3uam5VUaQ
+See updated PlayerController.cs script.
+Also in the CrossHair cube inspector, replace CrossHair.PNG with CrossHair2.PNG in the Sprite value under Sprite Renderer. 
+Go to Edit -> Project Settings -> Input and change the Sensitivity of Mouse X and Mouse Y to 0.01. 
+Go to File -> Build Settings, click Add Open Scenes, click Build and Run, and save it wherever.
+To exit the build on Windows, do Alt F4. 
+Since the cursor is now set to be invisible during gameplay, you also have to click the Esc key when playing in the editor. 
+
+
+
+Video 14: https://www.youtube.com/watch?v=Az_1gftizBs
+This video was just about creating objects which will be added to the setting. 
+
+
+
+Video 15: https://www.youtube.com/watch?v=UWhXS6iVsUM
