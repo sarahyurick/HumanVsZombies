@@ -212,3 +212,22 @@ This video was just about creating objects which will be added to the setting.
 
 
 Video 15: https://www.youtube.com/watch?v=UWhXS6iVsUM
+This video is about adding objects to the scene. Will be important later when our setting is more than just a background image. 
+In the Graphics folder, create a new folder called Level. Add Tree.PNG to it. Set Filter Mode to Point (no filter) and Compression to None.
+If it were multiple objects in the image, then you can set Sprite Mode to Multiple and splice the image. 
+Click Apply and then drag the tree into the scene. 
+Go to Edit -> Project Settings -> Graphics and set Transparency Sort Mode to Custom Axis. 
+Change Transparency Sort Axis to be X=0, Y=1, Z=0. 
+In the BasicMovement_2 and Tree cube inspectors, change the Sprite Sort Point to Pivot. 
+Then open the Sprite Editor for the tree and change Pivot to Custom, and drag the blue circle to the bottom of the image. 
+Do the same for the sprite sheet. 
+You can change the pivots a different way using Sorting Group components. See video for that way. 
+If something weird happens, then see video 12 dealing with State Machines. 
+In the cube hierachy, right click and Create Empty and name it Grid. Add a Grid component in its cube inspector.
+Set X=0.1 and Y=0.04 and set the Tool Handle Position from Center to Pivot. Make the tree a child of Grid. 
+For more precision in placing object positions, see video. 
+Drag the Tree cube into the Prefabs folder. 
+
+
+
+Video 16: https://www.youtube.com/watch?v=Cry7FOHZGN4
