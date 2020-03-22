@@ -273,3 +273,16 @@ See updated PlayerController.cs script and new Arrow.cs script.
 
 
 Video 22: https://www.youtube.com/watch?v=o6I2HdGxhME
+This video is a tutorial about how to make players respawn on the board after they are hit by arrows. 
+Reference for making GameLogic.cs script in the future. 
+
+
+
+Video 23: https://www.youtube.com/watch?v=38D8AbR8TVU
+This video is about having UnityEvents to reduce coupling in the code. 
+In the Scripts folder, create a new folder called Events and in that folder create a new C# script called HvZEvents. 
+See HvZEvents.cs and updated Arrow.cs scripts. 
+
+
+
+Video 24: https://www.youtube.com/watch?v=55eB8_CctAM
