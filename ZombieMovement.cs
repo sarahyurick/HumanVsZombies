@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class ZombieMovement : MonoBehaviour
 {
     private float timeToChangeDirection;
+    public float MOVEMENT_BASE_SPEED = 0.75f;
 
     // Use this for initialization
     public void Start()
@@ -23,7 +24,7 @@ public class ZombieMovement : MonoBehaviour
             ChangeDirection();
         }
 
-        GetComponent<Rigidbody>().velocity = transform.up * 2;
+        GetComponent<Rigidbody>().velocity = transform.up * MOVEMENT_BASE_SPEED;
     }
 
 
