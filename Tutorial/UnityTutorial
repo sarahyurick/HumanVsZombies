@@ -179,6 +179,15 @@ Add Holding.PNG to Assets/Graphics/Archer, set Filter Mode to Point (no filter),
 Click the BasicMovement_2 cube again and at the top left click Window -> Animation -> Animation. 
 Following similar steps from tutorials 1 and 2, create anim files AimLeft, AimRight, AimLeftDown, AimRightDown, AimLeftUp, AimRightUp.
 using Holding_0-5, 6-11, 12-17, 18-23, 24-29, 30-35, changing Samples to 12 each time. 
+In the Animator tab, delete the resulting AimLeft, etc. boxes and make a copy of Run and rename it Aim. 
+Click on the Aim box to open its inspector, click on its Blend Tree, and replace RunLeft with AimLeft, etc. 
+Also change the Parameters to AimHorizontal and AimVertical. 
+Go back to the Base Layer and add a transition from Any State to Aim. Uncheck Fixed Duration, set Transition Duration to 0, and uncheck Can Transition to Self. 
+Add conditions that AimMagnitude greater than 0. 
+Back in the Base Layer, create a transition from Aim to Exit. Uncheck Has Exit Time and Fixed Duration, and set Transition Duration to 0. 
+Add the condition that Aim is false. 
+See updated PlayerController.cs script. 
+Uncheck Loop Time on all Aiming animations. 
 
 
 
