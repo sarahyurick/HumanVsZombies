@@ -147,4 +147,13 @@ When you press play, you should be able to aim the cross hair!
 
 
 Video 7: https://www.youtube.com/watch?v=qMRrRQ587qQ
+Add Arrow.PNG to Assets/Graphics/Archer, change Filter Mode to Point (no filter) and Compression to None. 
+Drag and drop the arrow into the scene. 
+Create a new folder in Assets called Prefabs. Drag the Arrow cube into that folder and then delete Arrow from the hierarchy. 
+See updated PlayerController.cs script. 
+Click on the BasicMovement_2 cube to open its inspector, and click and drag the Arrow prefab into the Arrow Prefab field under Player Controller (Script).
+Click on the Arrow prefab to open its inspector, Add Component button and search to add Rigidbody 2D. Change Gravity Scale to 0.
 
+
+
+Video 8: https://www.youtube.com/watch?v=_QVAC69su3Q
