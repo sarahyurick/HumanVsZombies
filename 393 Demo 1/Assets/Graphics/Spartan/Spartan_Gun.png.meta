@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: 2fb13d7193d3db740a3862568c2ce955
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3725682429098996013
+    second: Spartan_Gun_0
+  - first:
+      213: -4206077334601331037
+    second: Spartan_Gun_1
+  - first:
+      213: 720815978405920401
+    second: Spartan_Gun_2
+  - first:
+      213: -3095790066159737339
+    second: Spartan_Gun_3
+  - first:
+      213: -5144966674406284056
+    second: Spartan_Gun_4
+  - first:
+      213: 8958971928950047225
+    second: Spartan_Gun_5
+  - first:
+      213: -4981781821704324831
+    second: Spartan_Gun_6
+  - first:
+      213: -1698311087115685763
+    second: Spartan_Gun_7
+  - first:
+      213: -3284910292168896374
+    second: Spartan_Gun_8
+  - first:
+      213: 1897044512239754779
+    second: Spartan_Gun_9
+  - first:
+      213: -4475061682870960756
+    second: Spartan_Gun_10
+  - first:
+      213: -7876798781744493488
+    second: Spartan_Gun_11
+  - first:
+      213: -2653962604828466470
+    second: Spartan_Gun_12
+  - first:
+      213: 7304773872645708748
+    second: Spartan_Gun_13
+  - first:
+      213: 7621992604230501399
+    second: Spartan_Gun_14
+  - first:
+      213: -7980399316221295258
+    second: Spartan_Gun_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spartan_Gun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 83
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5497344, y: 0.06656316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1939a03d2818c444c98bd4ed37f85b0c
+      internalID: -3725682429098996013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 359
+        width: 99
+        height: 121
+      alignment: 9
+      pivot: {x: 0.58339316, y: 0.056499135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ec17e1aaed0fa4cb28e94a9365c8e7
+      internalID: -4206077334601331037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_2
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 362
+        width: 95
+        height: 118
+      alignment: 9
+      pivot: {x: 0.49999967, y: 0.07320986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c482ccb0415db3047bcb92b661b6f6f8
+      internalID: 720815978405920401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 362
+        width: 95
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5173809, y: 0.0802064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5222c74f7942a47b36b55027d445b8
+      internalID: -3095790066159737339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_4
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 360
+        width: 76
+        height: 120
+      alignment: 9
+      pivot: {x: 0.24918684, y: 0.07344309}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84506154818807d4596818d0f290b646
+      internalID: -5144966674406284056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242
+        width: 95
+        height: 117
+      alignment: 9
+      pivot: {x: 0.52607113, y: 0.048393052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46959fdaac6d4c742b1349ab82990181
+      internalID: 8958971928950047225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 240
+        width: 97
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5255336, y: 0.06656341}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3742151856236314e8819d6a6c043b8c
+      internalID: -4981781821704324831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 242
+        width: 96
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5255336, y: 0.059683356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34efb6eff7a277c46911c9aa0492868d
+      internalID: -1698311087115685763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 241
+        width: 97
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5170225, y: 0.059683483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdebf2fd7ac57748a4cb7b7c9154291
+      internalID: -3284910292168896374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_9
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 241
+        width: 97
+        height: 118
+      alignment: 9
+      pivot: {x: 0.576601, y: 0.038227405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76553bdd3d267fd409b61d505c51602c
+      internalID: 1897044512239754779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 79
+        height: 117
+      alignment: 9
+      pivot: {x: 0.6358568, y: 0.04839325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5190396f4008f5c4ab95fd82bb3e6d47
+      internalID: -4475061682870960756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 120
+        width: 97
+        height: 120
+      alignment: 9
+      pivot: {x: 0.47446606, y: 0.039043553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc9f962cdb2a1c4f906f8303d0ec6b8
+      internalID: -7876798781744493488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_12
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 119
+        width: 95
+        height: 121
+      alignment: 9
+      pivot: {x: 0.48297748, y: 0.052803483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bfb4d873cde3a4a94a531afff0d5af
+      internalID: -2653962604828466470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_13
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 120
+        width: 74
+        height: 121
+      alignment: 9
+      pivot: {x: 0.2991799, y: 0.063322395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d74942b581822344a500568c21fbbef
+      internalID: 7304773872645708748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_14
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 121
+        width: 101
+        height: 119
+      alignment: 9
+      pivot: {x: 0.51634806, y: 0.069858715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b782d239540de45a3fc4931f39ef12
+      internalID: 7621992604230501399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_Gun_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5082558, y: 0.076796725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9211b7450b59e8b4eb5601961f6ffc3b
+      internalID: -7980399316221295258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
