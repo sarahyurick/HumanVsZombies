@@ -623,8 +623,6 @@ MonoBehaviour:
   BULLET_BASE_SPEED: 15
   CROSSHAIR_DISTANCE: 1.5
   movementSpeed: 0
-  self: {fileID: 1642792903}
-  health: 3
   rb: {fileID: 1642792908}
   animator: {fileID: 1642792904}
   crossHair: {fileID: 1569626751}
@@ -927,12 +925,12 @@ PrefabInstance:
     - target: {fileID: 66287852236422018, guid: 776904437ad5a42458723760c48ed7a3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.82
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 66287852236422018, guid: 776904437ad5a42458723760c48ed7a3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.31
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 66287852236422018, guid: 776904437ad5a42458723760c48ed7a3,
         type: 3}

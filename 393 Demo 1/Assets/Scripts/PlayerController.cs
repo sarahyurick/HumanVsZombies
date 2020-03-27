@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
         if(player.IsDead())
         {
             Destroy(gameObject);
+            StartCoroutine(DeathRoutine());
+            Application.Quit();
         }
     }
 
@@ -126,7 +128,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    IEnumerator DeathRoutine()
+    {
+        yield return new WaitForSeconds(500);
+    }
 }
 
 public class Player

@@ -1,6 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp.dll:
+    GameAssembly.dll:
     - Bullet
     - PlayerController
     - ZombieMovement
@@ -13,10 +13,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -55,11 +53,11 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 9982}
     - Class: 114
-      Script: {instanceID: 14166}
+      Script: {instanceID: 10828}
     - Class: 114
-      Script: {instanceID: 14450}
+      Script: {instanceID: 11270}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -173,6 +171,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 1eae172f9ccfa54693e9cf5649cf576e
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: Bullet
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -313,6 +317,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 6fd3dbc446446b0298e28093ac69af33
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: ZombieMovement
+  - hash:
+      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -389,6 +399,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 192fc0d3eae8c6e7c63b196e55d27abc
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: PlayerController
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -485,24 +501,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 18ce7bf3a09a6d6783eb2dd6aa7dfab1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: 41ead19854c2ccb39912f8c6daef9ea6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ZombieMovement
-  - hash:
-      serializedVersion: 2
-      Hash: bf023dd8a2d3aed8de1c072972555cda
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Bullet
   platform: 5
   scenePathNames:
   - Assets/Scenes/Gameplay.unity
