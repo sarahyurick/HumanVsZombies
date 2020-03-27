@@ -5,12 +5,20 @@ using System.Collections.Generic;
 
 public class ZombieMovement : MonoBehaviour
 {
+    public GameObject self;
+    public Zombie zombie;
+
     private float timeToChangeDirection;
     public float MOVEMENT_BASE_SPEED = 0.75f;
 
     Vector3 movement;
     public Animator animator;
     public Rigidbody2D rb;
+
+    void Awake()
+    {
+        zombie = new Zombie();
+    }
 
     // Use this for initialization
     public void Start()
@@ -21,6 +29,10 @@ public class ZombieMovement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        if(zombie.IsDead())
+        {
+            Destroy(self);
+        }
         timeToChangeDirection -= Time.deltaTime;
 
         if (timeToChangeDirection <= 0)
@@ -30,9 +42,8 @@ public class ZombieMovement : MonoBehaviour
 
         Animate();
         rb.velocity = new Vector2(movement.x, movement.y) * MOVEMENT_BASE_SPEED;
+        zombie.UpdatePosition(rb.position.x, rb.position.y);
     }
-
-
 
     private void ChangeDirection()
     {
@@ -54,5 +65,27 @@ public class ZombieMovement : MonoBehaviour
         }
         animator.SetFloat("Magnitude", movement.magnitude);
 
+    }
+}
+
+public class Zombie
+{
+    public Vector2 currentPosition;
+    public int Health = 1;
+
+    public void UpdatePosition(float x, float y)
+    {
+        currentPosition = new Vector2(x, y);
+    }
+
+    public void UpdateHealth()
+    {
+        Health--;
+    }
+
+    public bool IsDead()
+    {
+        if (Health <= 0) { return true; }
+        return false;
     }
 }

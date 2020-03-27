@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
+    public Vector2 currentPosition;
+    public Vector2 newPosition;
     public Vector2 velocity = new Vector2(0.0f, 0.0f);
     public GameObject spartan;
     public Vector2 offset = new Vector2(0.0f, 0.0f);
 
+    private BulletObject bullet;
+
+    private void Awake()
+    {
+        bullet = new BulletObject();
+    }
+
     void Update()
     {
-        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-        Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
-
-        Debug.DrawLine(currentPosition + offset, newPosition + offset, Color.red);
+        currentPosition = new Vector2(transform.position.x, transform.position.y);
+        newPosition = currentPosition + velocity * Time.deltaTime;
 
         RaycastHit2D[] hits = Physics2D.LinecastAll(currentPosition + offset, newPosition + offset);
 
@@ -23,24 +29,27 @@ public class Bullet : MonoBehaviour
             GameObject other = hit.collider.gameObject;
             if (other != spartan)
             {
-                if (other.CompareTag("Zombies"))
-                {
-                    // HvZEvents.zombieHit.Invoke(new HitEventData(spartan, other, gameObject));
-                    Destroy(gameObject);
+                string tag = other.tag;
+                if (bullet.HitZombie(tag)) {
                     Destroy(other);
-                    Debug.Log(other.name);
-                    // Debug.Log(hit.collider.gameObject);
-                    break;
                 }
-
-                if (other.CompareTag("Trees"))
-                {
-                    Destroy(gameObject);
-                    break;
-                }
+                Destroy(gameObject);
+                break;
             }
         }
 
         transform.position = newPosition;
+    }
+}
+
+public class BulletObject {
+
+    public bool HitZombie(string tag)
+    {
+        if(tag == "Zombies")
+        {
+            return true;
+        }
+        return false;
     }
 }
