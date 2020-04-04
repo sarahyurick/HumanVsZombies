@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7093712014583804567}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,3 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2a8f92f8d7b064cb6207298e7f6224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPosition: {x: 0, y: 0}
+  newPosition: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+  spartan: {fileID: 0}
+  zombie: {fileID: 66287852236422047, guid: 776904437ad5a42458723760c48ed7a3, type: 3}
+  offset: {x: 0, y: 0}

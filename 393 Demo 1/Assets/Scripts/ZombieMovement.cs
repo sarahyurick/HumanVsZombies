@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class ZombieMovement : MonoBehaviour
 {
-    public GameObject self;
     public Zombie zombie;
 
     private float timeToChangeDirection;
@@ -14,6 +13,13 @@ public class ZombieMovement : MonoBehaviour
     Vector3 movement;
     public Animator animator;
     public Rigidbody2D rb;
+
+    public int Health = 2;
+    public void UpdateHealth()
+    {
+        Health--;
+        zombie.UpdateHealth();
+    }
 
     void Awake()
     {
@@ -31,7 +37,7 @@ public class ZombieMovement : MonoBehaviour
     {
         if(zombie.IsDead())
         {
-            Destroy(self);
+            Destroy(gameObject);
         }
         timeToChangeDirection -= Time.deltaTime;
 
@@ -71,7 +77,7 @@ public class ZombieMovement : MonoBehaviour
 public class Zombie
 {
     public Vector2 currentPosition;
-    public int Health = 1;
+    public int Health = 2;
 
     public void UpdatePosition(float x, float y)
     {

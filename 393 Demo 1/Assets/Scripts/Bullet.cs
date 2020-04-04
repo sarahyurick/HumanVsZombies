@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public Vector2 newPosition;
     public Vector2 velocity = new Vector2(0.0f, 0.0f);
     public GameObject spartan;
+    public GameObject zombie;
     public Vector2 offset = new Vector2(0.0f, 0.0f);
 
     private BulletObject bullet;
@@ -31,7 +32,8 @@ public class Bullet : MonoBehaviour
             {
                 string tag = other.tag;
                 if (bullet.HitZombie(tag)) {
-                    Destroy(other);
+                    ZombieMovement zombieController = other.GetComponent<ZombieMovement>();
+                    zombieController.UpdateHealth();
                 }
                 Destroy(gameObject);
                 break;

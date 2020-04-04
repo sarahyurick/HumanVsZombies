@@ -25,6 +25,23 @@ public class PlayerController : MonoBehaviour
     bool endOfAiming;
 
     [Space]
+    [Header("Weapon statistics:")]
+    bool holdingWeapon;
+    float weaponHealth = 3;
+    bool holdingLaser;
+    bool holdingFlamethrower;
+    bool holdingGun;
+    bool holdingSlingshot;
+
+    [Space]
+    [Header("Player health bar:")]
+    public float barDisplay; //current progress
+    public Vector2 pos = new Vector2(20, 40);
+    public Vector2 size = new Vector2(60, 20);
+    public Texture2D emptyTex;
+    public Texture2D fullTex;
+
+    [Space]
     [Header("References:")]
     public Rigidbody2D rb;
     public Animator animator;
@@ -37,6 +54,8 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         player = new Player();
+        barDisplay = player.barDisplay;
+        holdingWeapon = true; // TODO: starts false
         crossHairObject = new CrossHairObject();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -46,7 +65,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ProcessInputs();
-        AimAndShoot();
+        if (holdingWeapon) { AimAndShoot(); }
         Animate();
         Move();
     }
@@ -55,6 +74,7 @@ public class PlayerController : MonoBehaviour
     {
         string gameObjectTag = coll.gameObject.tag;
         player.HandleCollision(gameObjectTag);
+        barDisplay = player.barDisplay;
         if(player.IsDead())
         {
             Destroy(gameObject);
@@ -67,19 +87,24 @@ public class PlayerController : MonoBehaviour
     {
         movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
-        Vector3 mouseMovement = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0.0f);
-        aim = aim + mouseMovement;
-        if (aim.magnitude > 1.0f)
-        {
-            aim.Normalize();
-        }
+        if (holdingWeapon) {
+            Vector3 mouseMovement = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0.0f);
+            aim = aim + mouseMovement;
+            if (aim.magnitude > 1.0f)
+            {
+                aim.Normalize();
+            }
 
-        isAiming = Input.GetButton("Fire1");
-        endOfAiming = Input.GetButtonUp("Fire1");
+            isAiming = Input.GetButton("Fire1");
+            endOfAiming = Input.GetButtonUp("Fire1");
 
-        if (movement.magnitude > 1.0f)
+            if (movement.magnitude > 1.0f)
+            {
+                movement.Normalize();
+            }
+        } else
         {
-            movement.Normalize();
+            aim = new Vector3(0.0f, 0.0f, 0.0f);
         }
     }
 
@@ -91,6 +116,19 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
         }
         animator.SetFloat("Magnitude", movement.magnitude);
+    }
+
+    void OnGUI()
+    {
+        //draw the background:
+        GUI.BeginGroup(new Rect(pos.x, pos.y, size.x, size.y));
+        GUI.Box(new Rect(0, 0, size.x, size.y), emptyTex);
+
+        //draw the filled-in part:
+        GUI.BeginGroup(new Rect(0, 0, size.x * barDisplay, size.y));
+        GUI.Box(new Rect(0, 0, size.x, size.y), fullTex);
+        GUI.EndGroup();
+        GUI.EndGroup();
     }
 
     private void Move()
@@ -120,6 +158,9 @@ public class PlayerController : MonoBehaviour
                 bulletScript.spartan = gameObject;
                 bullet.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
                 Destroy(bullet, 2.0f);
+
+                weaponHealth--;
+                if(weaponHealth <= 0) { holdingWeapon = false; }
             }
         }
         else
@@ -138,6 +179,7 @@ public class Player
 {
     public Vector3 currentPosition;
     public int Health = 3;
+    public float barDisplay = 3;
 
     public void UpdatePosition(float x, float y)
     {
@@ -155,6 +197,7 @@ public class Player
     public void UpdatePlayerHealth()
     {
         Health--;
+        barDisplay = Health/3f;
     }
 
     public bool IsDead()
