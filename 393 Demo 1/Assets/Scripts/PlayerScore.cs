@@ -2,20 +2,37 @@
 using UnityEngine.UI;
 
 // Used https://www.youtube.com/watch?v=vZU51tbgMXk
+// and https://www.youtube.com/watch?v=TAGZxRMloyU
 
 public class PlayerScore : MonoBehaviour
 {
+    public Transform player;
+    public int playerScore;
 
     public Text score;
     public Text highScore1;
     public Text highScore2;
     public Text highScore3;
 
+    private float startTime;
+
     void Start()
     {
+        startTime = Time.time;
+        playerScore = 0;
         highScore1.text = PlayerPrefs.GetInt("FirstPlace", 0).ToString();
         highScore2.text = PlayerPrefs.GetInt("SecondPlace", 0).ToString();
         highScore3.text = PlayerPrefs.GetInt("ThirdPlace", 0).ToString();
+    }
+
+    void Update()
+    {
+        float t = Time.time - startTime;
+        if(t % 10 == 0)
+        {
+            playerScore++;
+        }
+        score.text = player.position.z.ToString("0");
     }
 
     public void CalculateScore ()

@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
             StartCoroutine(DeathRoutine());
-            Application.Quit();
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 
