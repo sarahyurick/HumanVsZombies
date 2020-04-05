@@ -184,6 +184,18 @@ public class Player
         if(currentHealth <= 0) { return true;  }
         return false;
     }
+
+    public void SavePlayer ()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer ()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        currentHealth = data.health;
+    }
 }
 
 public class CrossHairObject
