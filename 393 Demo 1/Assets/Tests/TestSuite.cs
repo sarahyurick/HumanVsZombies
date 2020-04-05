@@ -96,9 +96,9 @@ namespace Tests
         {
             Player player = new Player();
             string tag = "Zombies";
-            int StartHealth = player.Health;
+            int StartHealth = player.currentHealth;
             player.HandleCollision(tag);
-            int ResultHealth = player.Health;
+            int ResultHealth = player.currentHealth;
             Assert.AreEqual(StartHealth - 1, ResultHealth);
         }
 

@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     Vector3 aim;
     bool isAiming;
     bool endOfAiming;
+    public PlayerHealthBar playerHealthBar;
 
     [Space]
     [Header("Weapon statistics:")]
@@ -32,14 +33,6 @@ public class PlayerController : MonoBehaviour
     bool holdingFlamethrower;
     bool holdingGun;
     bool holdingSlingshot;
-
-    [Space]
-    [Header("Player health bar:")]
-    public float barDisplay; //current progress
-    public Vector2 pos = new Vector2(20, 40);
-    public Vector2 size = new Vector2(60, 20);
-    public Texture2D emptyTex;
-    public Texture2D fullTex;
 
     [Space]
     [Header("References:")]
@@ -54,7 +47,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         player = new Player();
-        barDisplay = player.barDisplay;
+        playerHealthBar.SetMaxHealth(player.MAX_HEALTH);
         holdingWeapon = true; // TODO: starts false
         crossHairObject = new CrossHairObject();
         Cursor.lockState = CursorLockMode.Locked;
@@ -74,7 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         string gameObjectTag = coll.gameObject.tag;
         player.HandleCollision(gameObjectTag);
-        barDisplay = player.barDisplay;
+        playerHealthBar.SetHealth(player.currentHealth);
         if(player.IsDead())
         {
             Destroy(gameObject);
@@ -116,19 +109,6 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
         }
         animator.SetFloat("Magnitude", movement.magnitude);
-    }
-
-    void OnGUI()
-    {
-        //draw the background:
-        GUI.BeginGroup(new Rect(pos.x, pos.y, size.x, size.y));
-        GUI.Box(new Rect(0, 0, size.x, size.y), emptyTex);
-
-        //draw the filled-in part:
-        GUI.BeginGroup(new Rect(0, 0, size.x * barDisplay, size.y));
-        GUI.Box(new Rect(0, 0, size.x, size.y), fullTex);
-        GUI.EndGroup();
-        GUI.EndGroup();
     }
 
     private void Move()
@@ -178,8 +158,8 @@ public class PlayerController : MonoBehaviour
 public class Player
 {
     public Vector3 currentPosition;
-    public int Health = 3;
-    public float barDisplay = 3;
+    public int MAX_HEALTH = 3;
+    public int currentHealth = 3;
 
     public void UpdatePosition(float x, float y)
     {
@@ -196,13 +176,12 @@ public class Player
 
     public void UpdatePlayerHealth()
     {
-        Health--;
-        barDisplay = Health/3f;
+        currentHealth--;
     }
 
     public bool IsDead()
     {
-        if(Health <= 0) { return true;  }
+        if(currentHealth <= 0) { return true;  }
         return false;
     }
 }
