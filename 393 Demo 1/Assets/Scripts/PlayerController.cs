@@ -50,8 +50,8 @@ public class PlayerController : MonoBehaviour
         playerHealthBar.SetMaxHealth(player.MAX_HEALTH);
         holdingWeapon = true; // TODO: starts false
         crossHairObject = new CrossHairObject();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     // Update is called once per frame
