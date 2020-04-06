@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [Space]
     [Header("Character attributes:")]
     public float MOVEMENT_BASE_SPEED = 1.0f;
-    public float BULLET_BASE_SPEED = 3.0f;
+    public float AMMO_BASE_SPEED = 5.0f;
     public float CROSSHAIR_DISTANCE = 0.4f;
 
     [Space]
@@ -133,13 +133,13 @@ public class PlayerController : MonoBehaviour
             shootingDirection.Normalize();
             if (endOfAiming && holdingWeapon)
             {
-                GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                Bullet bulletScript = bullet.GetComponent<Bullet>();
-                bulletScript.velocity = shootingDirection * BULLET_BASE_SPEED;
+                GameObject ammo = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                Ammo ammoScript = ammo.GetComponent<Ammo>();
+                ammoScript.velocity = shootingDirection * AMMO_BASE_SPEED;
                 // bullet.GetComponent<Bullet>().velocity = shootingDirection * BULLET_BASE_SPEED;
-                bulletScript.spartan = gameObject;
-                bullet.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
-                Destroy(bullet, 2.0f);
+                ammoScript.spartan = gameObject;
+                ammo.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
+                Destroy(ammo, 2.0f);
 
                 weaponHealth--;
                 if(weaponHealth <= 0) { 

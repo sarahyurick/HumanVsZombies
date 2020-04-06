@@ -96,6 +96,7 @@ MonoBehaviour:
   currentPosition: {x: 0, y: 0}
   newPosition: {x: 0, y: 0}
   velocity: {x: 0, y: 0}
-  spartan: {fileID: 0}
+  spartan: {fileID: 6515957577335095827, guid: 952d160d1cf651e41aa8d73850572c75, type: 3}
   zombie: {fileID: 66287852236422047, guid: 776904437ad5a42458723760c48ed7a3, type: 3}
   offset: {x: 0, y: 0}
+  testInteger: 0
