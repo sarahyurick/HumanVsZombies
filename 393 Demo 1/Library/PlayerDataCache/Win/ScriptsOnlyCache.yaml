@@ -2,7 +2,12 @@ ScriptsOnlyBuild:
   usedScripts:
     GameAssembly.dll:
     - Bullet
+    - GameManager
+    - GameOverMenu
+    - MainMenu
+    - PauseMenu
     - PlayerController
+    - PlayerHealthBar
     - ZombieMovement
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -10,6 +15,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -20,7 +31,65 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRunnerWindow
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/GameOver.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9696}
+    - Class: 114
+      Script: {instanceID: 9898}
+    - Class: 114
+      Script: {instanceID: 10304}
+    - Class: 114
+      Script: {instanceID: 10676}
+    - Class: 114
+      Script: {instanceID: 10900}
+    - Class: 114
+      Script: {instanceID: 11092}
+    - Class: 114
+      Script: {instanceID: 11154}
+    - Class: 114
+      Script: {instanceID: 11534}
+    - Class: 114
+      Script: {instanceID: 11586}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Gameplay.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -53,12 +122,103 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9982}
+      Script: {instanceID: 9696}
     - Class: 114
-      Script: {instanceID: 10828}
+      Script: {instanceID: 9858}
     - Class: 114
-      Script: {instanceID: 11270}
+      Script: {instanceID: 9898}
+    - Class: 114
+      Script: {instanceID: 10004}
+    - Class: 114
+      Script: {instanceID: 10304}
+    - Class: 114
+      Script: {instanceID: 10574}
+    - Class: 114
+      Script: {instanceID: 10676}
+    - Class: 114
+      Script: {instanceID: 10856}
+    - Class: 114
+      Script: {instanceID: 11154}
+    - Class: 114
+      Script: {instanceID: 11158}
+    - Class: 114
+      Script: {instanceID: 11168}
+    - Class: 114
+      Script: {instanceID: 11306}
+    - Class: 114
+      Script: {instanceID: 11534}
+    - Class: 114
+      Script: {instanceID: 11568}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9696}
+    - Class: 114
+      Script: {instanceID: 9898}
+    - Class: 114
+      Script: {instanceID: 10304}
+    - Class: 114
+      Script: {instanceID: 10324}
+    - Class: 114
+      Script: {instanceID: 10676}
+    - Class: 114
+      Script: {instanceID: 10900}
+    - Class: 114
+      Script: {instanceID: 10914}
+    - Class: 114
+      Script: {instanceID: 10988}
+    - Class: 114
+      Script: {instanceID: 11092}
+    - Class: 114
+      Script: {instanceID: 11154}
+    - Class: 114
+      Script: {instanceID: 11328}
+    - Class: 114
+      Script: {instanceID: 11534}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -66,7 +226,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
-    - Class: 156049354
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -173,7 +337,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 1eae172f9ccfa54693e9cf5649cf576e
+      Hash: d5aeb71a107efb78fe9ae85ffb628e51
     assemblyName: GameAssembly.dll
     namespaceName: 
     className: Bullet
@@ -233,6 +397,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 307e151efbe183110501f78dc301de5f
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: PlayerScore
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -287,6 +457,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: c8c5e65e9fb858572516474d6e2102bc
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -317,7 +493,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 6fd3dbc446446b0298e28093ac69af33
+      Hash: e1cf628dcce89696d3b8291150f5b849
     assemblyName: GameAssembly.dll
     namespaceName: 
     className: ZombieMovement
@@ -371,6 +547,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -389,6 +571,18 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 1028c39545bcfa841aaab54121e69a47
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: PlayerHealthBar
+  - hash:
+      serializedVersion: 2
+      Hash: 84076d39b844b8db7143c749226a91d5
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -401,7 +595,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 192fc0d3eae8c6e7c63b196e55d27abc
+      Hash: 6c96a11d1e35420418b9de7161740a11
     assemblyName: GameAssembly.dll
     namespaceName: 
     className: PlayerController
@@ -497,11 +691,19 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: GameOverMenu
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
   platform: 5
   scenePathNames:
+  - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Gameplay.unity
+  - Assets/Scenes/GameOver.unity
   playerPath: C:/Users/Sarah/Desktop/Unity Test/393 Demo 1.exe

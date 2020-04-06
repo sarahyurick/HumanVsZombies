@@ -28,13 +28,15 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint14;
     public Transform spawnPoint15;
     public Transform spawnPoint16;
-
     public Transform[] spawnPoints;
     
     bool gameHasEnded = false;
 
     public int spawnDelay = 2;
+    public Transform spawnPrefab;
     public float restartDelay = 1f;
+
+    public int playerScore = 0;
 
     void Start()
     {
@@ -49,6 +51,19 @@ public class GameManager : MonoBehaviour
         SpawnZombies(3);
     }
 
+    void Update()
+    {
+        if(Time.time % 5 == 0)
+        {
+            AddToScore(1);
+        }
+    }
+
+    public void AddToScore(int count)
+    {
+        playerScore += count;
+    }
+
     public void SpawnZombies(int count)
     {
         // yield return new WaitForSeconds(spawnDelay);
@@ -57,6 +72,8 @@ public class GameManager : MonoBehaviour
             int choice = Random.Range(0, spawnPoints.Length);
             Transform thisSpawnPoint = (Transform) spawnPoints.GetValue(choice);
             Instantiate(zombiePrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
+            Transform dirt = Instantiate(spawnPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
+            Destroy(dirt.gameObject, 3f);
         }
 
     }
@@ -71,6 +88,7 @@ public class GameManager : MonoBehaviour
         if(gameHasEnded == false)
         {
             gameHasEnded = true;
+            Debug.Log(playerScore);
             SceneManager.LoadScene("GameOver");
             // Invoke("Restart", restartDelay);
         }

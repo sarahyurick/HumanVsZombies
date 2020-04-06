@@ -11,6 +11,12 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     // Update is called once per frame
     void Update()
     {

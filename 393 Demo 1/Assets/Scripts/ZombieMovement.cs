@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class ZombieMovement : MonoBehaviour
 {
     public Zombie zombie;
+    public GameManager gm;
 
     private float timeToChangeDirection;
     public float MOVEMENT_BASE_SPEED = 0.75f;
@@ -37,6 +38,8 @@ public class ZombieMovement : MonoBehaviour
     {
         if(zombie.IsDead())
         {
+            // Bullet bulletScript = bullet.GetComponent<Bullet>();
+            gm.GetComponent<GameManager>().AddToScore(10);
             Destroy(gameObject);
         }
         timeToChangeDirection -= Time.deltaTime;

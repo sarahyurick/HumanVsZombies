@@ -48,17 +48,17 @@ public class PlayerController : MonoBehaviour
     {
         player = new Player();
         playerHealthBar.SetMaxHealth(player.MAX_HEALTH);
-        holdingWeapon = true; // TODO: starts false
+        holdingWeapon = false;
         crossHairObject = new CrossHairObject();
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         ProcessInputs();
-        if (holdingWeapon) { AimAndShoot(); }
+        AimAndShoot();
         Animate();
         Move();
     }
@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
         string gameObjectTag = coll.gameObject.tag;
         player.HandleCollision(gameObjectTag);
         playerHealthBar.SetHealth(player.currentHealth);
+        holdingWeapon = player.holdingWeapon;
         if(player.IsDead())
         {
             Destroy(gameObject);
@@ -109,6 +110,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
         }
         animator.SetFloat("Magnitude", movement.magnitude);
+        animator.SetBool("holdingWeapon", holdingWeapon);
     }
 
     private void Move()
@@ -129,7 +131,7 @@ public class PlayerController : MonoBehaviour
             crossHair.SetActive(true);
 
             shootingDirection.Normalize();
-            if (endOfAiming)
+            if (endOfAiming && holdingWeapon)
             {
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                 Bullet bulletScript = bullet.GetComponent<Bullet>();
@@ -140,7 +142,10 @@ public class PlayerController : MonoBehaviour
                 Destroy(bullet, 2.0f);
 
                 weaponHealth--;
-                if(weaponHealth <= 0) { holdingWeapon = false; }
+                if(weaponHealth <= 0) { 
+                    holdingWeapon = false;
+                    player.holdingWeapon = false;
+                }
             }
         }
         else
@@ -160,6 +165,7 @@ public class Player
     public Vector3 currentPosition;
     public int MAX_HEALTH = 3;
     public int currentHealth = 3;
+    public bool holdingWeapon = false;
 
     public void UpdatePosition(float x, float y)
     {
@@ -171,6 +177,10 @@ public class Player
         if (tag == "Zombies")
         {
             UpdatePlayerHealth();
+        }
+        if (tag == "Buildings")
+        {
+            holdingWeapon = !holdingWeapon;
         }
     }
 

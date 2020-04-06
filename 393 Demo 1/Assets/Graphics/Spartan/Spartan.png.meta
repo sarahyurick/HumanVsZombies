@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 9b580fd5f8ee47947a5ec451bb4d4410
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4075436667221116008
+    second: Spartan_0
+  - first:
+      213: 7541170441512724549
+    second: Spartan_1
+  - first:
+      213: 2231019820910770049
+    second: Spartan_2
+  - first:
+      213: -1382313344741800855
+    second: Spartan_3
+  - first:
+      213: 6278187847869322284
+    second: Spartan_4
+  - first:
+      213: -4725547937450669637
+    second: Spartan_5
+  - first:
+      213: 3402683966700338230
+    second: Spartan_6
+  - first:
+      213: 4173646757922564547
+    second: Spartan_7
+  - first:
+      213: -3656703185918685256
+    second: Spartan_8
+  - first:
+      213: 2474963567659944045
+    second: Spartan_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -63,7 +93,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -72,7 +114,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Spartan_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 259
+        width: 101
+        height: 120
+      alignment: 9
+      pivot: {x: 0.58501154, y: 0.059683483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09b5b0a32ba68540b058f5b30a66a02
+      internalID: 4075436667221116008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 259
+        width: 85
+        height: 121
+      alignment: 9
+      pivot: {x: 0.5854735, y: 0.057864103}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab37c2be79a2547408b86c48e5a20b7f
+      internalID: 7541170441512724549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 260
+        width: 81
+        height: 120
+      alignment: 9
+      pivot: {x: 0.6712345, y: 0.059683483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd37c5b3b9e07814d9ed0a8ef3ad6d31
+      internalID: 2231019820910770049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_3
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 259
+        width: 97
+        height: 121
+      alignment: 9
+      pivot: {x: 0.53404534, y: 0.052405745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46754dad7416f6c4d936901a336799b1
+      internalID: -1382313344741800855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_4
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 131
+        width: 74
+        height: 120
+      alignment: 9
+      pivot: {x: 0.26794136, y: 0.07069143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b6c39e581c9994ea716509d35d23cd
+      internalID: 6278187847869322284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 131
+        width: 77
+        height: 121
+      alignment: 9
+      pivot: {x: 0.21693915, y: 0.06332259}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac37bb5f3b8cf24bb21c98cfebc2c7d
+      internalID: -4725547937450669637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_6
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 131
+        width: 101
+        height: 121
+      alignment: 9
+      pivot: {x: 0.552315, y: 0.06878107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91238a9f92b420d4d929824807cb6a6d
+      internalID: 3402683966700338230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3
+        width: 101
+        height: 120
+      alignment: 9
+      pivot: {x: 0.58501154, y: 0.059683505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd36fc9fb1a9cac4087fd02cc54d31d9
+      internalID: 4173646757922564547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_8
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 4
+        width: 97
+        height: 119
+      alignment: 9
+      pivot: {x: 0.49999985, y: 0.055983294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed506a37b396c90428b4cecf369a74c8
+      internalID: -3656703185918685256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spartan_9
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 4
+        width: 97
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5068092, y: 0.06708371}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cacacfa3c9cfbe42829475e110070e9
+      internalID: 2474963567659944045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
