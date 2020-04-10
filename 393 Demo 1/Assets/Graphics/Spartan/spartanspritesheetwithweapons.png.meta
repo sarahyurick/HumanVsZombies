@@ -1,0 +1,967 @@
+fileFormatVersion: 2
+guid: dbe39c6fbf3bede49967ecb69b92067e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5625517129167616251
+    second: spartanspritesheetwithweapons_0
+  - first:
+      213: 1063978298655138833
+    second: spartanspritesheetwithweapons_1
+  - first:
+      213: 590979704279809655
+    second: spartanspritesheetwithweapons_2
+  - first:
+      213: 5486560300258744733
+    second: spartanspritesheetwithweapons_3
+  - first:
+      213: 1737256634299985281
+    second: spartanspritesheetwithweapons_4
+  - first:
+      213: 5206350959722201893
+    second: spartanspritesheetwithweapons_5
+  - first:
+      213: 132834741495704707
+    second: spartanspritesheetwithweapons_6
+  - first:
+      213: -1674843086944603641
+    second: spartanspritesheetwithweapons_7
+  - first:
+      213: -7845772727248879762
+    second: spartanspritesheetwithweapons_8
+  - first:
+      213: 3658522872341579086
+    second: spartanspritesheetwithweapons_9
+  - first:
+      213: 7266688132389158747
+    second: spartanspritesheetwithweapons_10
+  - first:
+      213: 6574095109124698233
+    second: spartanspritesheetwithweapons_11
+  - first:
+      213: -3906109561727967880
+    second: spartanspritesheetwithweapons_12
+  - first:
+      213: -8097851982928922603
+    second: spartanspritesheetwithweapons_13
+  - first:
+      213: -702852749961155401
+    second: spartanspritesheetwithweapons_14
+  - first:
+      213: -5145079920720625798
+    second: spartanspritesheetwithweapons_15
+  - first:
+      213: 6666725453419790470
+    second: spartanspritesheetwithweapons_16
+  - first:
+      213: 17454668684960150
+    second: spartanspritesheetwithweapons_17
+  - first:
+      213: 1664979857959703653
+    second: spartanspritesheetwithweapons_18
+  - first:
+      213: -7849929406284167099
+    second: spartanspritesheetwithweapons_19
+  - first:
+      213: -4715437128174992542
+    second: spartanspritesheetwithweapons_20
+  - first:
+      213: 4183071571790908992
+    second: spartanspritesheetwithweapons_21
+  - first:
+      213: -6511419090545876583
+    second: spartanspritesheetwithweapons_22
+  - first:
+      213: -1960661383253773408
+    second: spartanspritesheetwithweapons_23
+  - first:
+      213: 5516307625494181634
+    second: spartanspritesheetwithweapons_24
+  - first:
+      213: -8563488498127720624
+    second: spartanspritesheetwithweapons_25
+  - first:
+      213: 2638474797564226276
+    second: spartanspritesheetwithweapons_26
+  - first:
+      213: 8830733486090117408
+    second: spartanspritesheetwithweapons_27
+  - first:
+      213: 7514190758595456523
+    second: spartanspritesheetwithweapons_28
+  - first:
+      213: -5910349150272348246
+    second: spartanspritesheetwithweapons_29
+  - first:
+      213: 2371018650340527455
+    second: spartanspritesheetwithweapons_30
+  - first:
+      213: -6145634164407678435
+    second: spartanspritesheetwithweapons_31
+  - first:
+      213: 4428372820912239939
+    second: spartanspritesheetwithweapons_32
+  - first:
+      213: -4050689050429779329
+    second: spartanspritesheetwithweapons_33
+  - first:
+      213: -7409981334460924808
+    second: spartanspritesheetwithweapons_34
+  - first:
+      213: 5572024674182511686
+    second: spartanspritesheetwithweapons_35
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 643
+        width: 98
+        height: 119
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.10784197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ea116b79373544aa8ef8374140abd0
+      internalID: -5625517129167616251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 643
+        width: 99
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5515996, y: 0.118162155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a605d265de359ec429b7337ccd20d7f4
+      internalID: 1063978298655138833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 643
+        width: 99
+        height: 119
+      alignment: 9
+      pivot: {x: 0.47935963, y: 0.10784197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41060362dd196e14d8ad0ce313ea955b
+      internalID: 590979704279809655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_3
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 644
+        width: 101
+        height: 120
+      alignment: 9
+      pivot: {x: 0.4174404, y: 0.09752226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a0774094f5e20479dfc67482c80905
+      internalID: 5486560300258744733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_4
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 644
+        width: 96
+        height: 119
+      alignment: 9
+      pivot: {x: 0.49999905, y: 0.12848186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7cf350cd272ed4a88c9e366a13878a
+      internalID: 1737256634299985281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 643
+        width: 103
+        height: 120
+      alignment: 9
+      pivot: {x: 0.51031923, y: 0.12848186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d7c4341a256514e9377b987d346db2
+      internalID: 5206350959722201893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 515
+        width: 98
+        height: 120
+      alignment: 9
+      pivot: {x: 0.4896799, y: 0.118162155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1dde859cbe26b840b01431ccc76e084
+      internalID: 132834741495704707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_7
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 515
+        width: 102
+        height: 121
+      alignment: 9
+      pivot: {x: 0.5515996, y: 0.118162155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c5b21d05dfde64abbd2c16b461cd38
+      internalID: -1674843086944603641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_8
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 515
+        width: 74
+        height: 120
+      alignment: 9
+      pivot: {x: 0.47935963, y: 0.12848234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ceeec01f6863046b677ed528c433e3
+      internalID: -7845772727248879762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_9
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 516
+        width: 83
+        height: 119
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.107842445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc53227ae4a8a0469c7bfb256e78ec8
+      internalID: 3658522872341579086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_10
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 513
+        width: 95
+        height: 122
+      alignment: 9
+      pivot: {x: 0.49999905, y: 0.107842445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7498949d21efd45ba510807e255bf9
+      internalID: 7266688132389158747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_11
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 515
+        width: 101
+        height: 120
+      alignment: 9
+      pivot: {x: 0.49999952, y: 0.118162155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3d53adf793a0b41862aff67e55aaf6
+      internalID: 6574095109124698233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_12
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 387
+        width: 79
+        height: 120
+      alignment: 9
+      pivot: {x: 0.4277604, y: 0.118162155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70e1aa50998d9741ab5d478701eeef3
+      internalID: -3906109561727967880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 387
+        width: 80
+        height: 121
+      alignment: 9
+      pivot: {x: 0.4793601, y: 0.09752226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1a4bf177768eb49bb875aa9c7193ee
+      internalID: -8097851982928922603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_14
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 387
+        width: 96
+        height: 121
+      alignment: 9
+      pivot: {x: 0.5103195, y: 0.118162155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb84521d6af58342b454927615d2f3d
+      internalID: -702852749961155401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_15
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 387
+        width: 96
+        height: 121
+      alignment: 9
+      pivot: {x: 0.46903992, y: 0.08720255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099a2e2c7a034554188c0bf263f348c7
+      internalID: -5145079920720625798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_16
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 387
+        width: 101
+        height: 120
+      alignment: 9
+      pivot: {x: 0.54127884, y: 0.118162155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885526cdde4eacf489afe833e18bcb0b
+      internalID: 6666725453419790470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_17
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 387
+        width: 100
+        height: 121
+      alignment: 9
+      pivot: {x: 0.48967934, y: 0.10784221}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb8a57e7139d9149a7bb0c1ef569833
+      internalID: 17454668684960150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 257
+        width: 97
+        height: 122
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.11816263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4174dff65d3adac458b126e2d8525f5a
+      internalID: 1664979857959703653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_19
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 259
+        width: 99
+        height: 121
+      alignment: 9
+      pivot: {x: 0.48968005, y: 0.107842684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9689fd50fd15db045ad774c5b5b12395
+      internalID: -7849929406284167099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_20
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 257
+        width: 101
+        height: 124
+      alignment: 9
+      pivot: {x: 0.41744018, y: 0.07688308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3d219330a72ae47ad80785249e880e
+      internalID: -4715437128174992542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_21
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 259
+        width: 98
+        height: 122
+      alignment: 9
+      pivot: {x: 0.46903992, y: 0.11816263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6fb38615f9ac94c9875c57c76c968f
+      internalID: 4183071571790908992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_22
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 260
+        width: 97
+        height: 119
+      alignment: 9
+      pivot: {x: 0.48967934, y: 0.107842684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922b5f8e14dfd7c4fa45ab8a1a265d39
+      internalID: -6511419090545876583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_23
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 260
+        width: 103
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5722389, y: 0.097522736}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7303fa168f5404bb417cfa23496eec
+      internalID: -1960661383253773408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_24
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 130
+        width: 102
+        height: 122
+      alignment: 9
+      pivot: {x: 0.47935998, y: 0.12848246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de69e0e6166a96445aae4341a1aac2e6
+      internalID: 5516307625494181634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_25
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 130
+        width: 96
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12848246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc93cad87742d44d8009fe444e40216
+      internalID: -8563488498127720624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_26
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 130
+        width: 101
+        height: 122
+      alignment: 9
+      pivot: {x: 0.49999952, y: 0.107842565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc44e1ab4a84c1438579c2acc8eebe6
+      internalID: 2638474797564226276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_27
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 129
+        width: 100
+        height: 123
+      alignment: 9
+      pivot: {x: 0.4174404, y: 0.11816251}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878c3a20b197a6b46aa6779ebf31bbfc
+      internalID: 8830733486090117408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_28
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 129
+        width: 97
+        height: 124
+      alignment: 9
+      pivot: {x: 0.48967934, y: 0.11816251}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c9c7971f64074478e3c842568a6558
+      internalID: 7514190758595456523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_29
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 130
+        width: 97
+        height: 125
+      alignment: 9
+      pivot: {x: 0.47935963, y: 0.11816251}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8e24bf8400d1b428c1e85aee33cdbc
+      internalID: -5910349150272348246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1
+        width: 101
+        height: 121
+      alignment: 9
+      pivot: {x: 0.5412795, y: 0.10784304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f9d4216fb28cb40ae418e18e334566
+      internalID: 2371018650340527455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_31
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 4
+        width: 100
+        height: 120
+      alignment: 9
+      pivot: {x: 0.4793601, y: 0.11816296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54208d14aae2516409e4d3b7f4847210
+      internalID: -6145634164407678435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_32
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1
+        width: 95
+        height: 123
+      alignment: 9
+      pivot: {x: 0.49999952, y: 0.12848288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0070869ffe41bd448a7598895a567979
+      internalID: 4428372820912239939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_33
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 4
+        width: 100
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5206394, y: 0.10784304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf8bd9995fe0d244bcf06752e743c7b
+      internalID: -4050689050429779329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_34
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 2
+        width: 100
+        height: 120
+      alignment: 9
+      pivot: {x: 0.42775965, y: 0.10784304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9acf6761a1c51449194504ebd94232
+      internalID: -7409981334460924808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spartanspritesheetwithweapons_35
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 5
+        width: 96
+        height: 119
+      alignment: 9
+      pivot: {x: 0.49999952, y: 0.10784304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a420eedf41b4f4281241b618f5c83b
+      internalID: 5572024674182511686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

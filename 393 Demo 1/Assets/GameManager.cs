@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public static GameManager gm;
 
     public Transform zombiePrefab;
+    public Transform laserPrefab;
+    public Transform flamethrowerPrefab;
+    public Transform gunPrefab;
+    public Transform boomerangPrefab;
 
     public Transform spawnPoint;
     public Transform spawnPoint1;
@@ -29,14 +33,13 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint15;
     public Transform spawnPoint16;
     public Transform[] spawnPoints;
-    
+
+    bool finalWave = false;
     bool gameHasEnded = false;
 
     public int spawnDelay = 2;
     public Transform spawnPrefab;
     public float restartDelay = 1f;
-
-    public int playerScore = 0;
 
     void Start()
     {
@@ -48,20 +51,15 @@ public class GameManager : MonoBehaviour
             spawnPoint5, spawnPoint6, spawnPoint7, spawnPoint8, spawnPoint9,
             spawnPoint10, spawnPoint11, spawnPoint12, spawnPoint13, spawnPoint14,
             spawnPoint15, spawnPoint16 };
-        SpawnZombies(3);
+        TriggerNewWave(0);
     }
 
     void Update()
     {
-        if(Time.time % 5 == 0)
+        if(finalWave) // Add timer
         {
-            AddToScore(1);
+            SpawnZombies(12);
         }
-    }
-
-    public void AddToScore(int count)
-    {
-        playerScore += count;
     }
 
     public void SpawnZombies(int count)
@@ -78,9 +76,29 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public static void TriggerNewWave()
+    public void SpawnWeapon(int waveCount)
+    {
+        int choice = Random.Range(0, spawnPoints.Length);
+        Transform thisSpawnPoint = (Transform)spawnPoints.GetValue(choice);
+        if(waveCount == 0)
+        {
+            Instantiate(laserPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
+        } else if(waveCount == 1)
+        {
+            Instantiate(flamethrowerPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
+        } else if(waveCount == 2)
+        {
+            Instantiate(gunPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
+        } else if(waveCount == 3)
+        {
+            Instantiate(boomerangPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
+        }
+    }
+
+    public static void TriggerNewWave(int waveCount)
     {
         gm.SpawnZombies(3);
+        gm.SpawnWeapon(waveCount);
     }
 
     public void EndGame ()
@@ -88,15 +106,8 @@ public class GameManager : MonoBehaviour
         if(gameHasEnded == false)
         {
             gameHasEnded = true;
-            Debug.Log(playerScore);
             SceneManager.LoadScene("GameOver");
             // Invoke("Restart", restartDelay);
         }
-    }
-
-    void Restart ()
-    {
-        SceneManager.LoadScene("Gameplay");
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

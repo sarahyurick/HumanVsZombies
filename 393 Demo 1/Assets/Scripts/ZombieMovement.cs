@@ -15,13 +15,6 @@ public class ZombieMovement : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
 
-    public int Health = 2;
-    public void UpdateHealth()
-    {
-        Health--;
-        zombie.UpdateHealth();
-    }
-
     void Awake()
     {
         zombie = new Zombie();
@@ -39,7 +32,7 @@ public class ZombieMovement : MonoBehaviour
         if(zombie.IsDead())
         {
             // Bullet bulletScript = bullet.GetComponent<Bullet>();
-            gm.GetComponent<GameManager>().AddToScore(10);
+            // gm.GetComponent<GameManager>().AddToScore(10);
             Destroy(gameObject);
         }
         timeToChangeDirection -= Time.deltaTime;
@@ -51,7 +44,6 @@ public class ZombieMovement : MonoBehaviour
 
         Animate();
         rb.velocity = new Vector2(movement.x, movement.y) * MOVEMENT_BASE_SPEED;
-        zombie.UpdatePosition(rb.position.x, rb.position.y);
     }
 
     private void ChangeDirection()
@@ -74,27 +66,5 @@ public class ZombieMovement : MonoBehaviour
         }
         animator.SetFloat("Magnitude", movement.magnitude);
 
-    }
-}
-
-public class Zombie
-{
-    public Vector2 currentPosition;
-    public int Health = 2;
-
-    public void UpdatePosition(float x, float y)
-    {
-        currentPosition = new Vector2(x, y);
-    }
-
-    public void UpdateHealth()
-    {
-        Health--;
-    }
-
-    public bool IsDead()
-    {
-        if (Health <= 0) { return true; }
-        return false;
     }
 }

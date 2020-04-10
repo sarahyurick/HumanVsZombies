@@ -32,6 +32,7 @@ namespace Tests
             Assert.AreEqual(result, 2);
         }
 
+        /*
         [Test]
         public void UserInputUpdatesPlayerPosition()
         {
@@ -42,12 +43,11 @@ namespace Tests
             Assert.AreNotEqual(StartPosition, player.currentPosition);
         }
 
-        /*
         [UnityTest]
         public IEnumerator PlayerCantWalkThroughBuildings()
         {
             yield return null;
-        } */
+        }
 
         [Test]
         public void MovingMouseUpdatesCrossHairDirection()
@@ -59,12 +59,11 @@ namespace Tests
             Assert.AreNotEqual(StartDirection, crossHair.Direction);
         }
 
-        /*
         [UnityTest]
         public IEnumerator ClickingMouseFiresBullet()
         {
             yield return null;
-        } */
+        }
 
         [Test]
         public void ZombiesMove()
@@ -76,12 +75,11 @@ namespace Tests
             Assert.AreNotEqual(StartPosition, zombie.currentPosition);
         }
 
-        /*
         [UnityTest]
         public IEnumerator ZombiesCantWalkThroughBuildings()
         {
             yield return null;
-        } */
+        }
 
         [Test]
         public void BulletCollisionKillsZombie()
@@ -111,7 +109,7 @@ namespace Tests
             player.HandleCollision(tag);
             player.HandleCollision(tag);
             Assert.True(player.IsDead());
-        }
+        } */
 
         // To add: CheckPlayerCollisionDetection ?
         // Animations?

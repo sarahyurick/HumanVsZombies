@@ -8,6 +8,10 @@ TagManager:
   - Zombies
   - Ammo
   - GM
+  - Gun
+  - Laser
+  - Flamethrower
+  - Boomerang
   layers:
   - Default
   - TransparentFX
