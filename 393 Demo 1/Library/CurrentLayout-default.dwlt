@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 494}
   m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 118
+  controlID: 58
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 791
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -852,20 +852,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/WeaponScripts
+    - Assets/Graphics/UI
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/WeaponScripts
+  - Assets/Graphics/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Sarah\Desktop\Unity Test\HumanVsZombies\393 Demo 1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ba310000
-    m_LastClickedID: 12730
-    m_ExpandedIDs: 000000006c2d0000b22d00002c2e00004a3000008e3100006032000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 5c300000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000ec2d0000682e000090300000d6310000e8310000a8320000aa32000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -893,7 +893,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006c2d00002c2e00004a3000008e310000
+    m_ExpandedIDs: 00000000a62d0000682e000090300000d6310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004a2e000004330000263b00007e2f0000d63e00006e3200001c370000000000002a2f0000fe2d000094360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1016,23 +1016,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 18a7ffff52fbffff10340000
+      m_SelectedIDs: f4340000
+      m_LastClickedID: 13556
+      m_ExpandedIDs: dcd8ffffa4d9ffff80daffff76ddffff40fbffff72fbffff2a3400003034000082340000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: WeaponHealthBar
-        m_OriginalName: WeaponHealthBar
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -22760
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -1078,9 +1078,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.4591024, y: 0.026337817, z: 222.82251}
+    m_Target: {x: -0.23028234, y: 2.563296, z: 193.8813}
     speed: 2
-    m_Value: {x: 0.4591024, y: 0.026337817, z: 222.82251}
+    m_Value: {x: -0.20486924, y: 2.504213, z: 201.9939}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1113,9 +1113,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.023686
+    m_Target: 10.861794
     speed: 2
-    m_Value: 12.023686
+    m_Value: 11.373607
   m_Ortho:
     m_Target: 1
     speed: 2
