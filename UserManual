@@ -1,0 +1,53 @@
+Upon downloading and launching HumanVsZombies,
+the user is presented with a Main Menu which hosts 3 buttons: Play, Settings, and Highscores. 
+At the top right there is also a red X, and when the user clicks it the game application closes completely.
+
+From the Main Menu, if the user clicks Settings, they are taken to the Settings page, 
+which has 3 buttons: Music, Sound, and Back. 
+If the user clicks the Music button, the background music for the application is turned on or off, 
+depending on the state it was in before. 
+Similarly, if the  user clicks the Sound button, the sound effects during gameplay are turned on or off.
+Finally, if the user clicks Back, they are taken back to the Main Menu. 
+
+From the Main Menu, if the user clicks Highscores, they are taken to the Highscores page. 
+This page displays the top 3 scores achieved during previous gameplay. 
+There are also 2 buttons: Main Menu and Reset. 
+If the user clicks Reset, all of the high scores are reset to zero.
+If the user clicks Main Menu, they are taken back to the Main Menu. 
+
+From the Main Menu, the user can click Play to enter gameplay. 
+The objective of the game is to get the highest score possible
+by killing as many zombies and surviving for as long as possible. 
+
+During gameplay, the user can move the player around by using the arrow or WASD keys. 
+If the player is not holding a weapon and moves to a weapon placed on the map, 
+then the player will be able to attack the zombies with the weapon. 
+The weapon's remaining ammo is indicated by a red bar at the bottom middle of the screen.
+
+The player can aim the weapon by moving the mouse,
+as indicated by the crosshair which encircles the player. 
+The player can fire ammo by clicking the mouse. 
+If the ammo reaches a zombie, then that zombie sustains damage. 
+Each weapon's ammo damages zombies differently, eventually killing them. 
+When the player runs out of ammo, they drop the weapon. 
+
+New waves are triggered when the player reaches certain scores, 
+at which point more zombies are spawned on the map
+and a new weapon is also spawned on the map. 
+The new weapon does less damage to zombies than the weapon which spawned from the previous wave.
+
+The user can pause the game at any time by clicking the Esc key on their keyboard. 
+This displays 3 buttons to the user: Resume, Settings, and Quit to Main Menu. 
+If the user clicks Settings, they are brought to a page which operates the same as already described above. 
+If the user clicks Quit to Main Menu, gameplay is terminated and the user is brought back to the Main Menu. 
+If the user clicks Resume, the game is unpaused and resumes as normal. 
+
+The player loses health when they touch a zombie, 
+as indicated by the green health bar at the bottom middle of the screen. 
+Once the player touches a zombie 3 times, the player's health is completely drained
+and the player has lost the game. 
+At this point, a Game Over menu is displayed, which contains the options to Replay or Exit. 
+If the user clicks Replay, they are brought back to the Main Menu. 
+If the user clicks Exit, the game application closes completely. 
+
+Thanks for reading and enjoy the game!
