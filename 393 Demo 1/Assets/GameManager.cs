@@ -32,6 +32,25 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint14;
     public Transform spawnPoint15;
     public Transform spawnPoint16;
+    public Transform spawnPoint17;
+    public Transform spawnPoint18;
+    public Transform spawnPoint19;
+    public Transform spawnPoint20;
+    public Transform spawnPoint21;
+    public Transform spawnPoint22;
+    public Transform spawnPoint23;
+    public Transform spawnPoint24;
+    public Transform spawnPoint25;
+    public Transform spawnPoint26;
+    public Transform spawnPoint27;
+    public Transform spawnPoint28;
+    public Transform spawnPoint29;
+    public Transform spawnPoint30;
+    public Transform spawnPoint31;
+    public Transform spawnPoint32;
+    public Transform spawnPoint33;
+    public Transform spawnPoint34;
+    public Transform spawnPoint35;
     public Transform[] spawnPoints;
 
     bool finalWave = false;
@@ -47,10 +66,14 @@ public class GameManager : MonoBehaviour
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
         }
-        spawnPoints = new Transform[17]{ spawnPoint, spawnPoint1, spawnPoint2, spawnPoint3, spawnPoint4,
+        spawnPoints = new Transform[36]{ spawnPoint, spawnPoint1, spawnPoint2, spawnPoint3, spawnPoint4,
             spawnPoint5, spawnPoint6, spawnPoint7, spawnPoint8, spawnPoint9,
             spawnPoint10, spawnPoint11, spawnPoint12, spawnPoint13, spawnPoint14,
-            spawnPoint15, spawnPoint16 };
+            spawnPoint15, spawnPoint16, spawnPoint17, spawnPoint18, spawnPoint19,
+            spawnPoint20, spawnPoint21, spawnPoint22, spawnPoint23, spawnPoint24,
+            spawnPoint25, spawnPoint26, spawnPoint27, spawnPoint28, spawnPoint29,
+            spawnPoint30, spawnPoint31, spawnPoint32, spawnPoint33, spawnPoint34,
+            spawnPoint35 };
         TriggerNewWave(0);
     }
 
