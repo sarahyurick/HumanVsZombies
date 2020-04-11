@@ -87,7 +87,7 @@ public class PlayerScore : MonoBehaviour
         shouldTriggerNewWave = true;
         // gm.TriggerNewWave(waveCount);
     }
-
+    /*
     public void UpdateHighScores (int number)
     {
 
@@ -117,8 +117,8 @@ public class PlayerScore : MonoBehaviour
             highScore3.text = number.ToString();
         }
         
-    }
-
+    } */
+    /*
     public void Reset ()
     {
         // PlayerPrefs.DeleteKey("FirstPlace");
