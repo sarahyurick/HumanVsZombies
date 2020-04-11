@@ -12,6 +12,7 @@ TagManager:
   - Laser
   - Flamethrower
   - Boomerang
+  - MovableObject
   layers:
   - Default
   - TransparentFX

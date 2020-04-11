@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour
     public Transform gunPrefab;
     public Transform boomerangPrefab;
 
+    public Transform barrelPrefab;
+    public Transform darkBoxPrefab;
+    public Transform lightBoxPrefab;
+    public Transform darkCratePrefab;
+    public Transform lightCratePrefab;
+
     public Transform spawnPoint;
     public Transform spawnPoint1;
     public Transform spawnPoint2;
@@ -75,6 +81,9 @@ public class GameManager : MonoBehaviour
             spawnPoint30, spawnPoint31, spawnPoint32, spawnPoint33, spawnPoint34,
             spawnPoint35 };
         TriggerNewWave(0);
+
+        Transform[] moveableObjects = new Transform[5] { barrelPrefab, darkBoxPrefab, lightBoxPrefab, darkCratePrefab, lightCratePrefab };
+        SpawnMovableObjects(moveableObjects);
     }
 
     void Update()
@@ -82,6 +91,16 @@ public class GameManager : MonoBehaviour
         if(finalWave) // Add timer
         {
             SpawnZombies(12);
+        }
+    }
+
+    public void SpawnMovableObjects(Transform[] moveableObjects)
+    {
+        for (int i = 0; i < moveableObjects.Length; i++)
+        {
+            int choice = Random.Range(0, spawnPoints.Length);
+            Transform thisSpawnPoint = (Transform)spawnPoints.GetValue(choice);
+            Instantiate(moveableObjects[i], thisSpawnPoint.position, thisSpawnPoint.rotation);
         }
     }
 
