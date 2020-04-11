@@ -88,11 +88,8 @@ public class PlayerScore : MonoBehaviour
         // gm.TriggerNewWave(waveCount);
     }
 
-    /*
-    public void CalculateScore ()
+    public void UpdateHighScores (int number)
     {
-        int number = Random.Range(1, 7);
-        score.text = number.ToString();
 
         if(number > PlayerPrefs.GetInt("FirstPlace", 0))
         {
