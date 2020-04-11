@@ -6,35 +6,89 @@ using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
-    public Transform player;
+    public static GameManager gm;
+
     public int playerScore;
+    public int waveCount;
 
     public Text score;
+    public Text wave;
+
+    public int WAVE2_TRIGGER = 30;
+    public int WAVE3_TRIGGER = 100;
+    public int WAVE4_TRIGGER = 200;
+    public bool shouldTriggerNewWave = false;
+    public bool timerTriggered = false;
+
+    int currentKills = 0;
+    /*
     public Text highScore1;
     public Text highScore2;
     public Text highScore3;
+    */
 
     private float startTime;
+    private int TIME_PER_SCOREINCREASE = 30;
 
     void Start()
     {
+        PlayerPrefs.SetInt("KillCount", 0);
+
+        if (gm == null)
+        {
+            gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+        }
+
         startTime = Time.time;
         playerScore = 0;
+        waveCount = 0;
+        /*
         highScore1.text = PlayerPrefs.GetInt("FirstPlace", 0).ToString();
         highScore2.text = PlayerPrefs.GetInt("SecondPlace", 0).ToString();
-        highScore3.text = PlayerPrefs.GetInt("ThirdPlace", 0).ToString();
+        highScore3.text = PlayerPrefs.GetInt("ThirdPlace", 0).ToString(); */
     }
 
     void Update()
     {
-        float t = Time.time - startTime;
-        if(t % 10 == 0)
+        int t = (int) (Time.time - startTime);
+
+        if((t+1) % TIME_PER_SCOREINCREASE == 0)
         {
-            playerScore++;
+            IncreaseScore(10);
+            timerTriggered = true;
+            startTime = Time.time;
         }
-        score.text = player.position.z.ToString("0");
+
+        if(currentKills < PlayerPrefs.GetInt("KillCount", 0))
+        {
+            IncreaseScore(10);
+            currentKills = PlayerPrefs.GetInt("KillCount", 0);
+        }
+
+        score.text = playerScore.ToString();
+        int waveText = waveCount + 1;
+        wave.text = (waveText).ToString();
+        // score.text = t.ToString();
+        // score.text = player.position.z.ToString("0");
     }
 
+    public void IncreaseScore(int amount)
+    {
+        playerScore = playerScore + amount;
+        if(playerScore == WAVE2_TRIGGER || playerScore == WAVE3_TRIGGER || playerScore == WAVE4_TRIGGER)
+        {
+            NextWave();
+        }
+    }
+
+    private void NextWave()
+    {
+        waveCount++;
+        shouldTriggerNewWave = true;
+        // gm.TriggerNewWave(waveCount);
+    }
+
+    /*
     public void CalculateScore ()
     {
         int number = Random.Range(1, 7);
@@ -75,5 +129,5 @@ public class PlayerScore : MonoBehaviour
         highScore1.text = "0";
         highScore2.text = "0";
         highScore3.text = "0";
-    }
+    }*/
 }

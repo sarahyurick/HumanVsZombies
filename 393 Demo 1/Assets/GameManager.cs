@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager gm;
+    public static PlayerScore ps;
 
     public Transform zombiePrefab;
     public Transform laserPrefab;
@@ -71,6 +72,7 @@ public class GameManager : MonoBehaviour
         if(gm == null)
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+            ps = GameObject.FindGameObjectWithTag("GM").GetComponent<PlayerScore>();
         }
         spawnPoints = new Transform[36]{ spawnPoint, spawnPoint1, spawnPoint2, spawnPoint3, spawnPoint4,
             spawnPoint5, spawnPoint6, spawnPoint7, spawnPoint8, spawnPoint9,
@@ -88,9 +90,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(finalWave) // Add timer
+        if(ps.shouldTriggerNewWave)
+        {
+            TriggerNewWave(ps.waveCount);
+            ps.shouldTriggerNewWave = false;
+        }
+        else if(finalWave && ps.timerTriggered)
         {
             SpawnZombies(12);
+            ps.timerTriggered = false;
         }
     }
 
@@ -134,12 +142,13 @@ public class GameManager : MonoBehaviour
         } else if(waveCount == 3)
         {
             Instantiate(boomerangPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
+            finalWave = true;
         }
     }
 
     public static void TriggerNewWave(int waveCount)
     {
-        gm.SpawnZombies(3);
+        gm.SpawnZombies(3 + 3*waveCount);
         gm.SpawnWeapon(waveCount);
     }
 
