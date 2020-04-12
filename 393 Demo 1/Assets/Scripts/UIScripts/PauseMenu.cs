@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 
 // Used https://www.youtube.com/watch?v=JivuXdrIHK0
 {
-    public static bool GameIsPaused = false;
+    public static UIManager uim = new UIManager("Gameplay");
 
     public GameObject pauseMenuUI;
 
@@ -22,28 +22,22 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(GameIsPaused)
-            {
-                Resume();
-            } else
-            {
-                Pause();
-            }
+            ResumeOrPause();
         }
     }
 
-    public void Resume ()
+    public void ResumeOrPause ()
     {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-    }
-
-    void Pause ()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+        if (uim.FirstPauseClick()) {
+            // Game is paused
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+        } else
+        {
+            // Game resumes
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
 
     public void LoadSettings()
@@ -53,7 +47,10 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        if(uim.ClickQuitToMainMenu())
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

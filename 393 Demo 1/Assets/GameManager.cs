@@ -156,12 +156,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame ()
     {
-        if(gs.gameHasEnded == false)
-        {
-            gs.UpdateHighScores(gs.playerScore);
-            PlayerPrefs.SetInt("KillCount", 0);
-            gs.gameHasEnded = true;
-            SceneManager.LoadScene("GameOver");
-        }
+        gs.EndGameplay();
+        SceneManager.LoadScene("GameOver");
     }
 }

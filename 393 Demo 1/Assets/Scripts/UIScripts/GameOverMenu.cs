@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
+    UIManager uim = new UIManager("GameOverMenu");
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -13,11 +15,17 @@ public class GameOverMenu : MonoBehaviour
 
     public void ReplayToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        if(uim.ClickToReplay())
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void ExitGame()
     {
-        Application.Quit();
+        if(uim.ClickToQuit())
+        {
+            Application.Quit();
+        }
     }
 }

@@ -1,23 +1,29 @@
-﻿using NUnit.Framework;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
+using NUnit.Framework;
 using UnityEngine.TestTools;
 
 public class UITests
 {
     [Test]
-    public void PCT1_PressingWMovesPlayerUp()
+    public void UIT1_MainMenuToGameplay()
     {
-        // Pressing W with speed 2 should change y position by +2
-        var speed = 2;
-        Assert.AreEqual(2, new Movement(speed).Calculate(0, 1, 1).y, 0.1f);
+        UIManager uim = new UIManager("MainMenu");
+        uim.ClickPlayButton();
+        Assert.AreEqual("IntroVideo", uim.currentScreen);
+        uim.GoToGameplay();
+        Assert.AreEqual("Gameplay", uim.currentScreen);
     }
-
-    // technically main menu to intro video to gameplay
-    // public void UIT1_MainMenuToGameplay()
 
     // public void UIT2_MainMenuToSettings()
 
-    // public void UIT3_MainMenuToHighscores()
+    [Test]
+    public void UIT3_MainMenuToHighscores()
+    {
+        UIManager uim = new UIManager("MainMenu");
+        uim.ClickHighscores();
+        Assert.AreEqual("Highscores", uim.currentScreen);
+    }
 
     // public void UIT4_SoundSettings()
 
@@ -27,27 +33,69 @@ public class UITests
 
     // public void UIT6_SettingsToPauseMenu()
 
-    // public void UIT7_HighscoresToMainMenu()
+    [Test]
+    public void UIT7_HighscoresToMainMenu()
+    {
+        UIManager uim = new UIManager("Highscores");
+        uim.ClickBack();
+        Assert.AreEqual("MainMenu", uim.currentScreen);
+    }
 
-    // public void UIT8_ResettingHighscores()
+    [Test]
+    public void UIT8_ResettingHighscores()
+    {
+        UIManager uim = new UIManager("Highscores");
+        bool ResetLeaderboard = uim.ClickReset();
+        Assert.IsTrue(ResetLeaderboard);
+    }
 
-    // public void UIT9_PausingGame()
+    [Test]
+    public void UIT9_PausingGame()
+    {
+        UIManager uim = new UIManager("Gameplay");
+        uim.FirstPauseClick();
+        Assert.AreEqual("PauseMenu", uim.currentScreen);
+    }
 
-    // public void UIT10_PauseMenuToGameplay()
+    [Test]
+    public void UIT10_PauseMenuToGameplay()
+    {
+        UIManager uim = new UIManager("PauseMenu");
+        uim.FirstPauseClick();
+        Assert.AreEqual("Gameplay", uim.currentScreen);
+    }
 
     // public void UIT11_PauseMenuToSettings()
 
-    // public void UIT12_PauseMenuToMainMenu()
+    [Test]
+    public void UIT12_PauseMenuToMainMenu()
+    {
+        UIManager uim = new UIManager("Gameplay");
+        // Click to pause
+        uim.FirstPauseClick();
+        uim.ClickQuitToMainMenu();
+        Assert.AreEqual("MainMenu", uim.currentScreen);
+    }
 
-    // public void UIT12_QuitFromPauseMenuUpdatesHighscores()
+    [Test]
+    public void UIT13_GameOverMenuToMainMenu()
+    {
+        UIManager uim = new UIManager("GameOverMenu");
+        uim.ClickToReplay();
+        Assert.AreEqual("MainMenu", uim.currentScreen);
+    }
 
-    // public void UIT13_GameOverMenuToMainMenu()
-
-    // public void UIT14_GameOverMenuToQuit()
-
-    // would have to add to documentation
+    [Test]
+    public void UIT14_GameOverMenuToQuit()
     // public void UIT15_MainMenuToQuit()
-
-    // would have to add to documentation
-    // public void UIT16_SkipIntroVideo()
+    {
+        // From GameOver menu
+        UIManager uim = new UIManager("GameOverMenu");
+        uim.ClickToQuit();
+        Assert.IsNull(uim.currentScreen);
+        // Can also be from Main menu
+        uim = new UIManager("MainMenu");
+        uim.ClickToQuit();
+        Assert.IsNull(uim.currentScreen);
+    }
 }

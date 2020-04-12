@@ -24,25 +24,14 @@ public class PlayerScore : MonoBehaviour
         }
 
         startTime = Time.time;
-        
     }
 
     void Update()
     {
         int t = (int) (Time.time - startTime);
 
-        if((t+1) % gs.TIME_PER_SCOREINCREASE == 0)
-        {
-            gs.IncreaseScore(10);
-            gs.timerTriggered = true;
-            startTime = Time.time;
-        }
-
-        if(gs.currentKills < PlayerPrefs.GetInt("KillCount", 0))
-        {
-            gs.IncreaseScore(10);
-            gs.currentKills = PlayerPrefs.GetInt("KillCount", 0);
-        }
+        gs.IncreaseScoreByTimeIfNecessary(t, startTime);
+        gs.IncreaseScoreIfZombieWasKilled();
 
         score.text = "Score:  " + gs.playerScore.ToString();
         int waveText = gs.waveCount + 1;
@@ -51,6 +40,6 @@ public class PlayerScore : MonoBehaviour
 
     public void PauseAndSave()
     {
-        gs.UpdateHighScores(gs.playerScore);
+        gs.UpdateHighScores();
     }
 }

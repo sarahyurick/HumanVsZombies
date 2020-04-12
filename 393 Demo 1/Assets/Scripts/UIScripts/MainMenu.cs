@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public static UIManager uim = new UIManager("MainMenu");
     // Used https://www.youtube.com/watch?v=zc8ac_qUXQY
 
     public void PlayGame ()
     {
-        SceneManager.LoadScene("IntroVideo");
+        if(uim.ClickPlayButton())
+        {
+            SceneManager.LoadScene("IntroVideo");
+        }
     }
 
     public void LoadSettings()
@@ -19,6 +23,9 @@ public class MainMenu : MonoBehaviour
 
     public void Exit ()
     {
-        Application.Quit();
+        if(uim.ClickToQuit())
+        {
+            Application.Quit();
+        }
     }
 }

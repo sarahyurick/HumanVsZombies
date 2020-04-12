@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneAfterVideoEnded : MonoBehaviour
 {
+    public static UIManager uim = new UIManager("IntroVideo");
     public VideoPlayer VideoPlayer; // Drag & Drop the GameObject holding the VideoPlayer component
 
     void Start()
@@ -15,11 +16,17 @@ public class LoadSceneAfterVideoEnded : MonoBehaviour
 
     public void SkipToGame()
     {
-        SceneManager.LoadScene("Gameplay");
+        if(uim.GoToGameplay())
+        {
+            SceneManager.LoadScene("Gameplay");
+        }
     }
 
     void LoadScene(VideoPlayer vp)
     {
-        SceneManager.LoadScene("Gameplay");
+        if (uim.GoToGameplay())
+        {
+            SceneManager.LoadScene("Gameplay");
+        }
     }
 }

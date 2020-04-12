@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player
 {
     // Keep track of player position?
+    public UIManager uim = new UIManager("Gameplay");
 
     public int MAX_HEALTH = 3;
     private int currentHealth = 3;
@@ -44,14 +45,18 @@ public class Player
 
     }
 
-    private void UpdatePlayerHealth()
+    public void UpdatePlayerHealth()
     {
         currentHealth--;
     }
 
     public bool IsDead()
     {
-        if (currentHealth <= 0) { return true; }
+        if (currentHealth <= 0) 
+        {
+            uim.Transition("GameOverMenu");
+            return true; 
+        }
         return false;
     }
 

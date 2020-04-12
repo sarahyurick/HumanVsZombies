@@ -12,23 +12,48 @@ public class GameStatus
     public int WAVE2_TRIGGER = 30;
     public int WAVE3_TRIGGER = 100;
     public int WAVE4_TRIGGER = 200;
+    public int MAX_WAVES = 3;
     public bool shouldTriggerNewWave = false;
     public bool timerTriggered = false;
 
     public int currentKills = 0;
     public int zombiesSpawned = 0;
+    public int weaponCount = 0;
 
     public int TIME_PER_SCOREINCREASE = 30;
+    public int KILL_REWARD = 10;
+    public int TIME_REWARD = 10;
 
     public void MarkFirstWave()
     {
         firstWave = false;
+        PlayerPrefs.SetInt("KillCount", 0);
         zombiesSpawned = NumberOfZombiesToSpawn(waveCount);
+        weaponCount++;
     }
 
     public int NumberOfZombiesToSpawn(int waveCount)
     {
         return 3 + 3 * waveCount;
+    }
+
+    public void IncreaseScoreByTimeIfNecessary(int t, float startTime)
+    {
+        if ((t + 1) % TIME_PER_SCOREINCREASE == 0)
+        {
+            IncreaseScore(TIME_REWARD);
+            timerTriggered = true;
+            startTime = Time.time;
+        }
+    }
+
+    public void IncreaseScoreIfZombieWasKilled()
+    {
+        if (currentKills < PlayerPrefs.GetInt("KillCount", 0))
+        {
+            IncreaseScore(KILL_REWARD);
+            currentKills = PlayerPrefs.GetInt("KillCount", 0);
+        }
     }
 
     public void IncreaseScore(int amount)
@@ -40,15 +65,20 @@ public class GameStatus
         }
     }
 
-    private void NextWave()
+    public void NextWave()
     {
-        waveCount++;
-        zombiesSpawned += NumberOfZombiesToSpawn(waveCount);
-        shouldTriggerNewWave = true;
+        if(waveCount < MAX_WAVES)
+        {
+            waveCount++;
+            zombiesSpawned += NumberOfZombiesToSpawn(waveCount);
+            weaponCount++;
+            shouldTriggerNewWave = true;
+        }
     }
 
-    public void UpdateHighScores(int number)
+    public void UpdateHighScores()
     {
+        int number = playerScore;
 
         if (number > PlayerPrefs.GetInt("FirstPlace", 0))
         {
@@ -72,5 +102,15 @@ public class GameStatus
             PlayerPrefs.SetInt("ThirdPlace", number);
         }
 
+    }
+
+    public void EndGameplay()
+    {
+        if (gameHasEnded == false)
+        {
+            UpdateHighScores();
+            PlayerPrefs.SetInt("KillCount", 0);
+            gameHasEnded = true;
+        }
     }
 }
