@@ -11,8 +11,8 @@ public class Movement
 
     public Vector3 Calculate(float h, float v, float deltaTime)
     {
-        var x = h * MOVEMENT_BASE_SPEED * deltaTime;
-        var y = v * MOVEMENT_BASE_SPEED * deltaTime;
+        var x = h * MOVEMENT_BASE_SPEED;
+        var y = v * MOVEMENT_BASE_SPEED;
 
         return new Vector3(x, y, 0);
     }

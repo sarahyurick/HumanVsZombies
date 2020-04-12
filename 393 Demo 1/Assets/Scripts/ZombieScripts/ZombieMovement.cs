@@ -22,7 +22,8 @@ public class ZombieMovement : MonoBehaviour
     // Use this for initialization
     public void Start()
     {
-        ChangeDirection();
+        movement = zombie.ChangeDirection();
+        timeToChangeDirection = 1.5f;
     }
 
     // Update is called once per frame
@@ -30,31 +31,18 @@ public class ZombieMovement : MonoBehaviour
     {
         if(zombie.IsDead())
         {
-            int kills = PlayerPrefs.GetInt("KillCount", 0);
-            PlayerPrefs.SetInt("KillCount", kills + 1);
-            // Bullet bulletScript = bullet.GetComponent<Bullet>();
             Destroy(gameObject);
         }
         timeToChangeDirection -= Time.deltaTime;
 
         if (timeToChangeDirection <= 0)
         {
-            ChangeDirection();
+            movement = zombie.ChangeDirection();
+            timeToChangeDirection = 1.5f;
         }
 
         Animate();
         rb.velocity = new Vector2(movement.x, movement.y) * MOVEMENT_BASE_SPEED;
-    }
-
-    private void ChangeDirection()
-    {
-        float[] directions = { -1.0f, 0.0f, 1.0f };
-        int choiceIndex = Random.Range(0, directions.Length);
-        float x = directions[choiceIndex];
-        choiceIndex = Random.Range(0, directions.Length);
-        float y = directions[choiceIndex];
-        movement = new Vector3(x, y, 0.0f);
-        timeToChangeDirection = 1.5f;
     }
 
     private void Animate()

@@ -87,10 +87,12 @@ public class PlayerController : MonoBehaviour
     private void ProcessInputs()
     {
         moving = Movement.Calculate(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical"),
+            Input.GetAxis("Horizontal"),
+            Input.GetAxis("Vertical"),
             Time.deltaTime);
-        transform.position += moving;
+        // transform.position += moving;
+
+        rb.velocity = new Vector2(moving.x, moving.y);
 
         if (player.isHoldingWeapon()) {
             aim = Aimer.AimDirection(aim,

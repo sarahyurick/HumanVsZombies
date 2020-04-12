@@ -5,18 +5,57 @@ using UnityEngine.TestTools;
 public class ZombieTests
 {
     [Test]
-    public void PCT1_PressingWMovesPlayerUp()
+    public void ZCT1_ZombiesSpawnWithNewGame()
     {
-        // Pressing W with speed 2 should change y position by +2
-        var speed = 2;
-        Assert.AreEqual(2, new Movement(speed).Calculate(0, 1, 1).y, 0.1f);
+        // Simulating information present at the beginning of a new game
+        GameStatus gs = new GameStatus();
+        int zombiesBeforeGameStarts = gs.zombiesSpawned;
+        // The game starts with the first wave
+        gs.MarkFirstWave();
+        Assert.AreNotEqual(zombiesBeforeGameStarts, gs.zombiesSpawned);
+        // The first wave is wave 0
+        // Check that the correct number of zombies spawned
+        int numberOfZombiesThatShouldHaveSpawned = gs.NumberOfZombiesToSpawn(0);
+        Assert.AreEqual(numberOfZombiesThatShouldHaveSpawned, gs.zombiesSpawned);
     }
 
-    // public void ZCT1_ZombiesSpawnWithNewGame()
+    [Test]
+    public void ZCT2_ZombiesSpawnWithNewWave()
+    {
+        GameStatus gs = new GameStatus();
+        gs.MarkFirstWave();
+        int zombiesSpawnedWithFirstWave = gs.zombiesSpawned;
+        gs.IncreaseScore(gs.WAVE2_TRIGGER);
+        // The second wave is wave 1
+        int numberOfZombiesThatShouldHaveSpawnedWithSecondWave = gs.NumberOfZombiesToSpawn(gs.waveCount);
+        Assert.AreEqual(zombiesSpawnedWithFirstWave + numberOfZombiesThatShouldHaveSpawnedWithSecondWave, gs.zombiesSpawned);
+    }
 
-    // public void ZCT2_ZombiesSpawnWithNewWave()
+    [Test]
+    public void ZCT3_ZombiesMove()
+    {
+        Zombie zombie = new Zombie();
+        Vector3 startPosition = zombie.position;
+        zombie.ChangeDirection();
+        Assert.AreNotEqual(startPosition, zombie.position);
+    }
 
-    // public void ZCT3_ZombiesMove()
-
-    // public void ZCT4_ZombiesDiesWhenHealthReachesZero()
+    [Test]
+    public void ZCT4_ZombiesDiesWhenHealthReachesZero()
+    {
+        int killsSoFar = PlayerPrefs.GetInt("KillCount", 0);
+        // Make a new zombie
+        Zombie zombie = new Zombie();
+        // Remove all of its health
+        int damageAllHealth = zombie.MAX_HEALTH;
+        zombie.UpdateHealth(damageAllHealth);
+        if(zombie.IsDead())
+        {
+            Assert.AreEqual(killsSoFar + 1, PlayerPrefs.GetInt("KillCount", 0));
+        } else
+        {
+            // The zombie is not dead so the kill count should be the same
+            Assert.AreEqual(killsSoFar, PlayerPrefs.GetInt("KillCount", 0));
+        }
+    }
 }
