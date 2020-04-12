@@ -8,20 +8,19 @@ public class PlayerController : MonoBehaviour
     [Header("Input settings:")]
     public int playerId = 0;
     public Player player;
-    private CrossHairObject crossHairObject;
 
     [Space]
     [Header("Character attributes:")]
-    public float MOVEMENT_BASE_SPEED = 2.0f;
-    public float CROSSHAIR_DISTANCE = 1f;
+    public float MOVEMENT_BASE_SPEED = 3.0f;
 
     [Space]
     [Header("Character statistics:")]
-    Vector3 movement;
-    public float movementSpeed;
+    public Movement Movement;
+    Vector3 moving;
+    public Aim Aimer;
     Vector3 aim;
-    bool isAiming;
-    bool endOfAiming;
+    public Shoot Shoot;
+    bool shooting;
     public PlayerHealthBar playerHealthBar;
     public WeaponHealthBar weaponHealthBar;
 
@@ -42,11 +41,16 @@ public class PlayerController : MonoBehaviour
     {
         player = new Player();
         playerHealthBar.SetMaxHealth(player.MAX_HEALTH);
+
         weaponHealthBar.SetMaxHealth(1);
         weaponHealthBar.SetHealth(0);
-        crossHairObject = new CrossHairObject();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        Movement = new Movement(MOVEMENT_BASE_SPEED);
+        Aimer = new Aim();
+        Shoot = new Shoot();
     }
 
     // Update is called once per frame
@@ -55,7 +59,6 @@ public class PlayerController : MonoBehaviour
         ProcessInputs();
         AimAndShoot();
         Animate();
-        Move();
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -68,7 +71,7 @@ public class PlayerController : MonoBehaviour
         playerHealthBar.SetHealth(player.getCurrentHealth());
         if(player.IsDead())
         {
-            Destroy(gameObject);
+            // Destroy(gameObject);
             FindObjectOfType<GameManager>().EndGame();
         }
 
@@ -83,23 +86,19 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessInputs()
     {
-        movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        moving = Movement.Calculate(
+            Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Vertical"),
+            Time.deltaTime);
+        transform.position += moving;
 
         if (player.isHoldingWeapon()) {
-            Vector3 mouseMovement = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0.0f);
-            aim = aim + mouseMovement;
-            if (aim.magnitude > 1.0f)
-            {
-                aim.Normalize();
-            }
+            aim = Aimer.AimDirection(aim,
+                Input.GetAxis("Mouse X"),
+                Input.GetAxis("Mouse Y"),
+                0.0f);
 
-            isAiming = Input.GetButton("Fire1");
-            endOfAiming = Input.GetButtonUp("Fire1");
-
-            if (movement.magnitude > 1.0f)
-            {
-                movement.Normalize();
-            }
+            shooting = Input.GetButtonUp("Fire1");
         } else
         {
             aim = new Vector3(0.0f, 0.0f, 0.0f);
@@ -108,12 +107,12 @@ public class PlayerController : MonoBehaviour
 
     private void Animate()
     {
-        if (movement != Vector3.zero)
+        if (moving != Vector3.zero)
         {
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Horizontal", moving.x);
+            animator.SetFloat("Vertical", moving.y);
         }
-        animator.SetFloat("Magnitude", movement.magnitude);
+        animator.SetFloat("Magnitude", moving.magnitude);
 
         animator.SetBool("holdingLaser", player.isHoldingLaser());
         animator.SetBool("holdingFlamethrower", player.isHoldingFlamethrower());
@@ -121,40 +120,19 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("holdingBoomerang", player.isHoldingBoomerang());
     }
 
-    private void Move()
-    {
-        // transform.position = transform.position + movement * Time.deltaTime;
-        rb.velocity = new Vector2(movement.x, movement.y) * MOVEMENT_BASE_SPEED;
-    }
-
     private void AimAndShoot()
     {
-        Vector2 shootingDirection = new Vector2(aim.x, aim.y);
-        crossHairObject.UpdateDirection(aim.x, aim.y);
+        Vector2 shootingDirection = Shoot.CalculateDirection(aim);
 
         if (aim.magnitude > 0.0f)
         {
-            crossHair.transform.localPosition = aim * CROSSHAIR_DISTANCE;
+            crossHair.transform.localPosition = aim;
             crossHair.SetActive(true);
 
-            shootingDirection.Normalize();
-            if (endOfAiming && player.isHoldingWeapon())
+            if (shooting && player.isHoldingWeapon())
             {
                 // Need to figure out what we're shooting
-                GameObject ammo; 
-                if(player.isHoldingLaser())
-                {
-                    ammo = Instantiate(laserBeamPrefab, transform.position, Quaternion.identity);
-                } else if(player.isHoldingFlamethrower())
-                {
-                    ammo = Instantiate(firePrefab, transform.position, Quaternion.identity);
-                } else if(player.isHoldingGun())
-                {
-                    ammo = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                } else
-                {
-                    ammo = Instantiate(boomerangPrefab, transform.position, Quaternion.identity);
-                }
+                GameObject ammo = AmmoToFire();
 
                 // Shoot it
                 Ammo ammoScript = ammo.GetComponent<Ammo>();
@@ -163,15 +141,8 @@ public class PlayerController : MonoBehaviour
                 ammo.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
                 Destroy(ammo, 2.0f);
 
-                player.currentWeapon.UseWeapon();
-                if (!player.currentWeapon.HasAmmo())
-                {
-                    player.DropWeapon();
-                    weaponHealthBar.SetHealth(0);
-                } else
-                {
-                    weaponHealthBar.SetHealth(player.currentWeapon.GetCurrentAmmo());
-                }
+                int ammoLeft = Shoot.ShootWeapon(player);
+                weaponHealthBar.SetHealth(ammoLeft);
             }
         }
         else
@@ -180,14 +151,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-}
-
-public class CrossHairObject
-{
-    public Vector2 Direction;
-    
-    public void UpdateDirection(float x, float y)
+    private GameObject AmmoToFire()
     {
-        Direction = new Vector2(x, y);
+        if (player.isHoldingLaser())
+        {
+            return Instantiate(laserBeamPrefab, transform.position, Quaternion.identity);
+        }
+        else if (player.isHoldingFlamethrower())
+        {
+            return Instantiate(firePrefab, transform.position, Quaternion.identity);
+        }
+        else if (player.isHoldingGun())
+        {
+            return Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            return Instantiate(boomerangPrefab, transform.position, Quaternion.identity);
+        }
     }
 }

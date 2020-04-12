@@ -12,6 +12,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("IntroVideo");
     }
 
+    public void LoadSettings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
     public void Exit ()
     {
         Application.Quit();

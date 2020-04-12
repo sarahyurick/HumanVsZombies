@@ -83,17 +83,4 @@ public class Player
         holdingBoomerang = false;
     }
 
-    // Get back to this
-    public void SavePlayer()
-    {
-        SaveSystem.SavePlayer(this);
-    }
-
-    // Get back to this
-    public void LoadPlayer()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-
-        currentHealth = data.health;
-    }
 }

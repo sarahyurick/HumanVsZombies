@@ -57,9 +57,9 @@ public class PlayerScore : MonoBehaviour
             currentKills = PlayerPrefs.GetInt("KillCount", 0);
         }
 
-        score.text = playerScore.ToString();
+        score.text = "Score:  " + playerScore.ToString();
         int waveText = waveCount + 1;
-        wave.text = (waveText).ToString();
+        wave.text = "Wave:  " + (waveText).ToString();
         // score.text = t.ToString();
         // score.text = player.position.z.ToString("0");
     }

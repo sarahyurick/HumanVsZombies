@@ -31,8 +31,39 @@ namespace Tests
             int result = 1 + 1;
             Assert.AreEqual(result, 2);
         }
-
         /*
+        [UnityTest]
+        public IEnumerator MovesAlongXAxisForHorizontalInput()
+        {
+            var player = new GameObject().AddComponent<player>();
+            player.Speed = 1;
+
+            yield return null;
+
+            Assert.AreEqual(1, player.transform.position.x, 0.1f);
+        }
+
+        [UnityTest]
+        public IEnumerator MovesAlongYAxisForVerticalInput()
+        {
+            var player = new GameObject().AddComponent<player>();
+            player.Speed = 1;
+
+            yield return null;
+
+            Assert.AreEqual(1, player.transform.position.y, 0.1f);
+        }
+        
+        [Header("User Interface Tests")]
+
+        [Header("PlayerController Class Tests")]
+
+        [Header("Zombie Class Tests")]
+        // [Test]
+
+        [Header("Collision Tests")]
+
+        
         [Test]
         public void UserInputUpdatesPlayerPosition()
         {
