@@ -21,11 +21,6 @@ public class PlayerScore : MonoBehaviour
     public bool timerTriggered = false;
 
     int currentKills = 0;
-    /*
-    public Text highScore1;
-    public Text highScore2;
-    public Text highScore3;
-    */
 
     private float startTime;
     private int TIME_PER_SCOREINCREASE = 30;
@@ -42,10 +37,7 @@ public class PlayerScore : MonoBehaviour
         startTime = Time.time;
         playerScore = 0;
         waveCount = 0;
-        /*
-        highScore1.text = PlayerPrefs.GetInt("FirstPlace", 0).ToString();
-        highScore2.text = PlayerPrefs.GetInt("SecondPlace", 0).ToString();
-        highScore3.text = PlayerPrefs.GetInt("ThirdPlace", 0).ToString(); */
+        
     }
 
     void Update()
@@ -87,7 +79,7 @@ public class PlayerScore : MonoBehaviour
         shouldTriggerNewWave = true;
         // gm.TriggerNewWave(waveCount);
     }
-    /*
+
     public void UpdateHighScores (int number)
     {
 
@@ -95,36 +87,26 @@ public class PlayerScore : MonoBehaviour
         {
             int newThird = PlayerPrefs.GetInt("SecondPlace", 0);
             PlayerPrefs.SetInt("ThirdPlace", newThird);
-            highScore3.text = newThird.ToString();
 
             int newSecond = PlayerPrefs.GetInt("FirstPlace", 0);
             PlayerPrefs.SetInt("SecondPlace", newSecond);
-            highScore2.text = newSecond.ToString();
 
             PlayerPrefs.SetInt("FirstPlace", number);
-            highScore1.text = number.ToString();
         } else if(number > PlayerPrefs.GetInt("SecondPlace", 0))
         {
             int newThird = PlayerPrefs.GetInt("SecondPlace", 0);
             PlayerPrefs.SetInt("ThirdPlace", newThird);
-            highScore3.text = newThird.ToString();
 
             PlayerPrefs.SetInt("SecondPlace", number);
-            highScore2.text = number.ToString();
         } else if(number > PlayerPrefs.GetInt("ThirdPlace", 0))
         {
             PlayerPrefs.SetInt("ThirdPlace", number);
-            highScore3.text = number.ToString();
         }
         
-    } */
-    /*
-    public void Reset ()
+    }
+
+    public void PauseAndSave()
     {
-        // PlayerPrefs.DeleteKey("FirstPlace");
-        PlayerPrefs.DeleteAll();
-        highScore1.text = "0";
-        highScore2.text = "0";
-        highScore3.text = "0";
-    }*/
+        UpdateHighScores(playerScore);
+    }
 }

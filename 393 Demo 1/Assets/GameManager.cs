@@ -156,6 +156,7 @@ public class GameManager : MonoBehaviour
     {
         if(gameHasEnded == false)
         {
+            ps.UpdateHighScores(ps.playerScore);
             gameHasEnded = true;
             SceneManager.LoadScene("GameOver");
             // Invoke("Restart", restartDelay);
