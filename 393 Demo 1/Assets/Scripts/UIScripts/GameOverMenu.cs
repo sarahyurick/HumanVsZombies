@@ -15,7 +15,7 @@ public class GameOverMenu : MonoBehaviour
 
     public void ReplayToMainMenu()
     {
-        if(uim.ClickToReplay())
+        // if(uim.ClickToReplay())
         {
             SceneManager.LoadScene("MainMenu");
         }

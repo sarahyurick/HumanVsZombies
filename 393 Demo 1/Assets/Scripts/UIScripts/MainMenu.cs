@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame ()
     {
-        if(uim.ClickPlayButton())
+        // if(uim.ClickPlayButton())
         {
             SceneManager.LoadScene("IntroVideo");
         }
@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
 
     public void Exit ()
     {
-        if(uim.ClickToQuit())
+        // if(uim.ClickToQuit())
         {
             Application.Quit();
         }

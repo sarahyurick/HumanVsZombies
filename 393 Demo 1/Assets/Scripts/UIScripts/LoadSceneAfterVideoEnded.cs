@@ -16,7 +16,7 @@ public class LoadSceneAfterVideoEnded : MonoBehaviour
 
     public void SkipToGame()
     {
-        if(uim.GoToGameplay())
+        // if(uim.GoToGameplay())
         {
             SceneManager.LoadScene("Gameplay");
         }
@@ -24,7 +24,7 @@ public class LoadSceneAfterVideoEnded : MonoBehaviour
 
     void LoadScene(VideoPlayer vp)
     {
-        if (uim.GoToGameplay())
+        // if (uim.GoToGameplay())
         {
             SceneManager.LoadScene("Gameplay");
         }
