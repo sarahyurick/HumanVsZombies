@@ -68,6 +68,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+
         if (gm == null)
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();

@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -44,10 +44,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 741
-  m_MinSize: {x: 681, y: 494}
-  m_MaxSize: {x: 14004, y: 14044}
+  m_MinSize: {x: 683, y: 344}
+  m_MaxSize: {x: 12008, y: 8044}
   vertical: 0
-  controlID: 110
+  controlID: 100
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 341
     height: 386
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 222}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -120,14 +120,14 @@ MonoBehaviour:
     y: 386
     width: 1130
     height: 355
-  m_MinSize: {x: 232, y: 272}
-  m_MaxSize: {x: 10002, y: 10022}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 102, y: 122}
+  m_MaxSize: {x: 4002, y: 4022}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 16}
   - {fileID: 21}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,10 +216,10 @@ MonoBehaviour:
     y: 0
     width: 1130
     height: 741
-  m_MinSize: {x: 404, y: 494}
-  m_MaxSize: {x: 10002, y: 14044}
+  m_MinSize: {x: 406, y: 344}
+  m_MaxSize: {x: 8006, y: 8044}
   vertical: 1
-  controlID: 111
+  controlID: 101
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,10 +241,10 @@ MonoBehaviour:
     y: 0
     width: 1130
     height: 386
-  m_MinSize: {x: 404, y: 222}
-  m_MaxSize: {x: 8004, y: 4022}
+  m_MinSize: {x: 406, y: 222}
+  m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 112
+  controlID: 102
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1530,20 +1530,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs/Setting/Weapons
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs/Setting/Weapons
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Sarah\Desktop\Unity Test\HumanVsZombies\393 Demo 1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 882e0000
-    m_LastClickedID: 11912
-    m_ExpandedIDs: 000000000c2e0000ea2e0000302f00008a310000f2320000fe32000008330000303300009c3300000e3400001034000000ca9a3b
+    scrollPos: {x: 0, y: 192}
+    m_SelectedIDs: b62f0000
+    m_LastClickedID: 12214
+    m_ExpandedIDs: 000000000e2e0000ee2e0000342f000092310000fe3200000a330000143300003c330000a6330000d43300001c3400001e340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1571,7 +1571,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c2e0000ea2e0000302f00008a310000f2320000fe32000008330000303300009c3300000e34000010340000
+    m_ExpandedIDs: 000000000e2e0000ee2e0000342f000092310000fe3200000a330000143300003c330000a6330000d43300001c3400001e340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004a2e000004330000263b00007e2f0000d63e00006e3200001c370000000000002a2f0000fe2d000094360000403a0000cc330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1696,7 +1696,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7cedffffaeedffffb0edffffb8edffffbcedffffc2edffff06efffff3ef3ffff70f3ffff06f4ffff0ef4ffff14f4ffff20f4ffff66faffffaafaffff72fbffff06360000823600004237000000540000b6540000d45400003a550000
+      m_ExpandedIDs: 72fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1756,9 +1756,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.5492198, y: -1.9837921, z: 154.45117}
+    m_Target: {x: 4.1876135, y: 0.3375913, z: 112.31849}
     speed: 2
-    m_Value: {x: -1.5492198, y: -1.9837921, z: 154.45117}
+    m_Value: {x: 4.1876135, y: 0.3375913, z: 112.31849}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1791,9 +1791,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.00239
+    m_Target: 10.626156
     speed: 2
-    m_Value: 15.00239
+    m_Value: 10.626156
   m_Ortho:
     m_Target: 1
     speed: 2

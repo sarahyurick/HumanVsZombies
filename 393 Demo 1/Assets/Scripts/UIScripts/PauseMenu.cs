@@ -32,11 +32,13 @@ public class PauseMenu : MonoBehaviour
             // Game is paused
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
+            PlayerPrefs.SetInt("Paused", 1);
         } else
         {
             // Game resumes
             pauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
+            PlayerPrefs.SetInt("Paused", 2);
         }
     }
 
@@ -50,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         if(uim.ClickQuitToMainMenu())
         {
             Time.timeScale = 1f;
+            PlayerPrefs.SetInt("Paused", 0);
             SceneManager.LoadScene("MainMenu");
         }
     }

@@ -37,8 +37,16 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject boomerangPrefab;
 
+    [Space]
+    [Header("Sound effects:")]
+    public AudioSource LaserAudio;
+    public AudioSource FlamethrowerAudio;
+    public AudioSource GunAudio;
+    public AudioSource BoomerangAudio;
+
     void Awake()
     {
+        PlayerPrefs.SetInt("Paused", 0);
         player = new Player();
         playerHealthBar.SetMaxHealth(player.MAX_HEALTH);
 
@@ -56,9 +64,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessInputs();
-        AimAndShoot();
-        Animate();
+        if(PlayerPrefs.GetInt("Paused", 0) == 0)
+        {
+            ProcessInputs();
+            AimAndShoot();
+            Animate();
+        } else if(PlayerPrefs.GetInt("Paused", 0) == 2)
+        {
+            PlayerPrefs.SetInt("Paused", 0);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -168,18 +182,22 @@ public class PlayerController : MonoBehaviour
     {
         if (player.isHoldingLaser())
         {
+            if (PlayerPrefs.GetInt("Sound", 0) == 1) { LaserAudio.Play(); }
             return Instantiate(laserBeamPrefab, transform.position, Quaternion.identity);
         }
         else if (player.isHoldingFlamethrower())
         {
+            if (PlayerPrefs.GetInt("Sound", 0) == 1) { FlamethrowerAudio.Play(); }
             return Instantiate(firePrefab, transform.position, Quaternion.identity);
         }
         else if (player.isHoldingGun())
         {
+            if (PlayerPrefs.GetInt("Sound", 0) == 1) { GunAudio.Play(); }
             return Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }
         else
         {
+            if (PlayerPrefs.GetInt("Sound", 0) == 1) { BoomerangAudio.Play(); }
             return Instantiate(boomerangPrefab, transform.position, Quaternion.identity);
         }
     }

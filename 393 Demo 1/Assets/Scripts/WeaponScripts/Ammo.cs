@@ -15,6 +15,8 @@ public class Ammo : MonoBehaviour
     private int damage;
     private AmmoObject ammo;
 
+    public AudioSource ZombieHitAudio;
+
     private void Awake()
     {
         ammo = new AmmoObject(damage);
@@ -45,6 +47,7 @@ public class Ammo : MonoBehaviour
             {
                 string tag = other.tag;
                 if (ammo.HitZombie(tag)) {
+                    ZombieHitAudio.Play();
                     ZombieMovement zombieController = other.GetComponent<ZombieMovement>();
                     zombieController.zombie.UpdateHealth(damage);
                 }
