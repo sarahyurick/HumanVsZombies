@@ -15,7 +15,13 @@ public class UITests
         Assert.AreEqual("Gameplay", uim.currentScreen);
     }
 
-    // public void UIT2_MainMenuToSettings()
+    [Test]
+    public void UIT2_MainMenuToSettings()
+    {
+        UIManager uim = new UIManager("MainMenu");
+        uim.ClickSettings();
+        Assert.AreEqual("SettingsMenu", uim.currentScreen);
+    }
 
     [Test]
     public void UIT3_MainMenuToHighscores()
@@ -25,13 +31,41 @@ public class UITests
         Assert.AreEqual("Highscores", uim.currentScreen);
     }
 
-    // public void UIT4_SoundSettings()
+    [Test]
+    public void UIT4_SoundSettings()
+    {
+        UIManager uim = new UIManager("SettingsMenu");
+        int startingSound = PlayerPrefs.GetInt("Sound", 0);
+        uim.ToggleSound();
+        Assert.AreNotEqual(startingSound, PlayerPrefs.GetInt("Sound", 0));
+    }
 
-    // public void UIT5_MusicSettings()
+    [Test]
+    public void UIT5_MusicSettings()
+    {
+        UIManager uim = new UIManager("SettingsMenu");
+        int startingMusic = PlayerPrefs.GetInt("Music", 0);
+        uim.ToggleMusic();
+        Assert.AreNotEqual(startingMusic, PlayerPrefs.GetInt("Music", 0));
+    }
 
-    // public void UIT6_SettingsToMainMenu()
+    [Test]
+    public void UIT6_SettingsToMainMenu()
+    {
+        UIManager uim = new UIManager("MainMenu");
+        uim.ClickSettings();
+        uim.ClickBack();
+        Assert.AreEqual("MainMenu", uim.currentScreen);
+    }
 
-    // public void UIT6_SettingsToPauseMenu()
+    [Test]
+    public void UIT6_SettingsToPauseMenu()
+    {
+        UIManager uim = new UIManager("PauseMenu");
+        uim.ClickSettings();
+        uim.ClickBack();
+        Assert.AreEqual("PauseMenu", uim.currentScreen);
+    }
 
     [Test]
     public void UIT7_HighscoresToMainMenu()
@@ -65,7 +99,13 @@ public class UITests
         Assert.AreEqual("Gameplay", uim.currentScreen);
     }
 
-    // public void UIT11_PauseMenuToSettings()
+    [Test]
+    public void UIT11_PauseMenuToSettings()
+    {
+        UIManager uim = new UIManager("PauseMenu");
+        uim.ClickSettings();
+        Assert.AreEqual("SettingsMenu", uim.currentScreen);
+    }
 
     [Test]
     public void UIT12_PauseMenuToMainMenu()
@@ -87,7 +127,6 @@ public class UITests
 
     [Test]
     public void UIT14_GameOverMenuToQuit()
-    // public void UIT15_MainMenuToQuit()
     {
         // From GameOver menu
         UIManager uim = new UIManager("GameOverMenu");

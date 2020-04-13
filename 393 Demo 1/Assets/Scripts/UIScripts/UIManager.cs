@@ -32,6 +32,43 @@ public class UIManager
         return false;
     }
 
+    public bool ClickSettings()
+    {
+        if(currentScreen == "MainMenu")
+        {
+            Transition("SettingsMenu");
+            return true;
+        }
+        if(currentScreen == "PauseMenu")
+        {
+            Transition("SettingsMenu");
+            return true;
+        }
+        return false;
+    }
+
+    public bool ToggleSound()
+    {
+        if(currentScreen == "SettingsMenu")
+        {
+            MusicClass mc = new MusicClass();
+            mc.ToggleSound();
+            return true;
+        }
+        return false;
+    }
+
+    public bool ToggleMusic()
+    {
+        if (currentScreen == "SettingsMenu")
+        {
+            MusicClass mc = new MusicClass();
+            mc.ToggleMusic();
+            return true;
+        }
+        return false;
+    }
+
     public bool ClickHighscores()
     {
         if(currentScreen == "MainMenu")
@@ -47,6 +84,11 @@ public class UIManager
         if(currentScreen == "Highscores")
         {
             Transition("MainMenu");
+            return true;
+        }
+        if(currentScreen == "SettingsMenu")
+        {
+            Transition(previousScreen);
             return true;
         }
         return false;

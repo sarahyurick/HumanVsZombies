@@ -10,11 +10,8 @@ public class MusicClass : MonoBehaviour
 
     private void Awake()
     {
-        // PlayerPrefs.SetInt("Music", 1);
-        // PlayerPrefs.SetInt("Sound", 1);
         // DontDestroyOnLoad(transform.gameObject);
         _audioSource = GetComponent<AudioSource>();
-
     }
 
     public void PlayMusic()
