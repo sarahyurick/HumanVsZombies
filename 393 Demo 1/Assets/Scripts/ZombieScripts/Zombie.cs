@@ -6,7 +6,7 @@ public class Zombie
 {
     public Vector3 position = Vector3.zero;
     public int MAX_HEALTH = 10;
-    private int Health = 10;
+    public int Health = 10;
 
     public Vector3 ChangeDirection()
     {

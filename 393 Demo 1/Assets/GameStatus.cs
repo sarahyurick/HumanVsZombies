@@ -20,7 +20,7 @@ public class GameStatus
     public int zombiesSpawned = 0;
     public int weaponCount = 0;
 
-    public int TIME_PER_SCOREINCREASE = 30;
+    public int TIME_PER_SCOREINCREASE = 10;
     public int KILL_REWARD = 10;
     public int TIME_REWARD = 10;
 
@@ -37,14 +37,14 @@ public class GameStatus
         return 3 + 3 * waveCount;
     }
 
-    public void IncreaseScoreByTimeIfNecessary(int t, float startTime)
+    public bool IncreaseScoreByTimeIfNecessary(int t)
     {
         if ((t + 1) % TIME_PER_SCOREINCREASE == 0)
         {
             IncreaseScore(TIME_REWARD);
             timerTriggered = true;
-            startTime = Time.time;
         }
+        return false;
     }
 
     public void IncreaseScoreIfZombieWasKilled()
@@ -76,10 +76,8 @@ public class GameStatus
         }
     }
 
-    public void UpdateHighScores()
+    public void UpdateHighScores(int number)
     {
-        int number = playerScore;
-
         if (number > PlayerPrefs.GetInt("FirstPlace", 0))
         {
             int newThird = PlayerPrefs.GetInt("SecondPlace", 0);
@@ -104,6 +102,7 @@ public class GameStatus
 
     }
 
+    /*
     public void EndGameplay()
     {
         if (gameHasEnded == false)
@@ -112,5 +111,5 @@ public class GameStatus
             PlayerPrefs.SetInt("KillCount", 0);
             gameHasEnded = true;
         }
-    }
+    } */
 }

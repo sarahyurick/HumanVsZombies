@@ -21,7 +21,7 @@ public class GameStatusTests
     {
         GameStatus gs = new GameStatus();
         int startingScore = gs.playerScore;
-        gs.IncreaseScoreByTimeIfNecessary(gs.TIME_PER_SCOREINCREASE-1, 1.0f);
+        gs.IncreaseScoreByTimeIfNecessary(gs.TIME_PER_SCOREINCREASE-1);
         Assert.AreEqual(startingScore + gs.TIME_REWARD, gs.playerScore);
     }
 
@@ -71,21 +71,21 @@ public class GameStatusTests
         PlayerPrefs.SetInt("ThirdPlace", 10);
         // Player's score beats the previous first place
         gs.playerScore = 40;
-        gs.UpdateHighScores();
+        gs.UpdateHighScores(gs.playerScore);
         Assert.AreEqual(PlayerPrefs.GetInt("FirstPlace", 0), 40);
         Assert.AreEqual(PlayerPrefs.GetInt("SecondPlace", 0), 30);
         Assert.AreEqual(PlayerPrefs.GetInt("ThirdPlace", 0), 20);
 
         // Player's score beats the previous second place
         gs.playerScore = 35;
-        gs.UpdateHighScores();
+        gs.UpdateHighScores(gs.playerScore);
         Assert.AreEqual(PlayerPrefs.GetInt("FirstPlace", 0), 40);
         Assert.AreEqual(PlayerPrefs.GetInt("SecondPlace", 0), 35);
         Assert.AreEqual(PlayerPrefs.GetInt("ThirdPlace", 0), 30);
 
         // Player's score beats the previous third place
         gs.playerScore = 32;
-        gs.UpdateHighScores();
+        gs.UpdateHighScores(gs.playerScore);
         Assert.AreEqual(PlayerPrefs.GetInt("FirstPlace", 0), 40);
         Assert.AreEqual(PlayerPrefs.GetInt("SecondPlace", 0), 35);
         Assert.AreEqual(PlayerPrefs.GetInt("ThirdPlace", 0), 32);

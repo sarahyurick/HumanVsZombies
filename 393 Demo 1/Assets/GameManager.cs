@@ -61,17 +61,18 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint35;
     public Transform[] spawnPoints;
 
+    bool finalWave = false;
+    bool gameHasEnded = false;
+
     public Transform spawnPrefab;
 
     void Start()
     {
-        if(gm == null)
+        if (gm == null)
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
             ps = GameObject.FindGameObjectWithTag("GM").GetComponent<PlayerScore>();
         }
-        gs = ps.gs;
-
         spawnPoints = new Transform[36]{ spawnPoint, spawnPoint1, spawnPoint2, spawnPoint3, spawnPoint4,
             spawnPoint5, spawnPoint6, spawnPoint7, spawnPoint8, spawnPoint9,
             spawnPoint10, spawnPoint11, spawnPoint12, spawnPoint13, spawnPoint14,
@@ -80,28 +81,23 @@ public class GameManager : MonoBehaviour
             spawnPoint25, spawnPoint26, spawnPoint27, spawnPoint28, spawnPoint29,
             spawnPoint30, spawnPoint31, spawnPoint32, spawnPoint33, spawnPoint34,
             spawnPoint35 };
+        TriggerNewWave(0);
 
         Transform[] moveableObjects = new Transform[5] { barrelPrefab, darkBoxPrefab, lightBoxPrefab, darkCratePrefab, lightCratePrefab };
-
-        if (gs.firstWave)
-        {
-            gs.MarkFirstWave();
-            TriggerNewWave(0);
-            SpawnMovableObjects(moveableObjects);
-        }
+        SpawnMovableObjects(moveableObjects);
     }
 
     void Update()
     {
-        if(gs.shouldTriggerNewWave)
+        if (ps.shouldTriggerNewWave)
         {
-            TriggerNewWave(ps.gs.waveCount);
-            gs.shouldTriggerNewWave = false;
+            TriggerNewWave(ps.waveCount);
+            ps.shouldTriggerNewWave = false;
         }
-        else if(gs.finalWave && gs.timerTriggered)
+        else if (finalWave && ps.timerTriggered)
         {
             SpawnZombies(12);
-            gs.timerTriggered = false;
+            ps.timerTriggered = false;
         }
     }
 
@@ -117,10 +113,11 @@ public class GameManager : MonoBehaviour
 
     public void SpawnZombies(int count)
     {
-        for(int i = 0; i < count; i++)
+        // yield return new WaitForSeconds(spawnDelay);
+        for (int i = 0; i < count; i++)
         {
             int choice = Random.Range(0, spawnPoints.Length);
-            Transform thisSpawnPoint = (Transform) spawnPoints.GetValue(choice);
+            Transform thisSpawnPoint = (Transform)spawnPoints.GetValue(choice);
             Instantiate(zombiePrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
             Transform dirt = Instantiate(spawnPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
             Destroy(dirt.gameObject, 3f);
@@ -132,31 +129,39 @@ public class GameManager : MonoBehaviour
     {
         int choice = Random.Range(0, spawnPoints.Length);
         Transform thisSpawnPoint = (Transform)spawnPoints.GetValue(choice);
-        if(waveCount == 0)
+        if (waveCount == 0)
         {
             Instantiate(laserPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
-        } else if(waveCount == 1)
+        }
+        else if (waveCount == 1)
         {
             Instantiate(flamethrowerPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
-        } else if(waveCount == 2)
+        }
+        else if (waveCount == 2)
         {
             Instantiate(gunPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
-        } else if(waveCount == 3)
+        }
+        else if (waveCount == 3)
         {
             Instantiate(boomerangPrefab, thisSpawnPoint.position, thisSpawnPoint.rotation);
-            gs.finalWave = true;
+            finalWave = true;
         }
     }
 
     public static void TriggerNewWave(int waveCount)
     {
-        gm.SpawnZombies(gs.NumberOfZombiesToSpawn(waveCount));
+        gm.SpawnZombies(3 + 3 * waveCount);
         gm.SpawnWeapon(waveCount);
     }
 
-    public void EndGame ()
+    public void EndGame()
     {
-        gs.EndGameplay();
-        SceneManager.LoadScene("GameOver");
+        if (gameHasEnded == false)
+        {
+            ps.UpdateHighScores(ps.playerScore);
+            gameHasEnded = true;
+            SceneManager.LoadScene("GameOver");
+            // Invoke("Restart", restartDelay);
+        }
     }
 }

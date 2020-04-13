@@ -26,22 +26,29 @@ public class Player
     public bool isHoldingGun() { return holdingGun; }
     public bool isHoldingBoomerang() { return holdingBoomerang; }
 
-    public void HandleCollision(string tag)
+    public bool HandleCollision(string tag)
     {
+        bool needToHandleFurther = true;
+
         if (tag == "Zombies")
         {
             UpdatePlayerHealth();
+            return !needToHandleFurther;
         }
 
-        if (!holdingWeapon)
-        {
-            if (tag == "Laser" || tag == "Flamethrower" || tag == "Gun" || tag == "Boomerang")
+        if (tag == "Laser" || tag == "Flamethrower" || tag == "Gun" || tag == "Boomerang")
+            {
+            if (!holdingWeapon)
             {
                 PickUpWeapon(tag);
                 holdingWeapon = true;
                 currentWeapon = new Weapon(tag);
+                return !needToHandleFurther;
             }
+            return !needToHandleFurther;
         }
+
+        return needToHandleFurther;
 
     }
 

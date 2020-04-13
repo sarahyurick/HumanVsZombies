@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)
     {
         string gameObjectTag = coll.gameObject.tag;
-        player.HandleCollision(gameObjectTag);
+        bool needToHandleFurther = player.HandleCollision(gameObjectTag);
 
         // Stuff that needs to be updated after a collision
         // Health if it was a zombie
@@ -80,6 +80,17 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(coll.gameObject);
             weaponHealthBar.SetMaxHealth(player.currentWeapon.GetCurrentAmmo());
+        }
+
+        if(needToHandleFurther)
+        {
+            string hitBodyType = coll.gameObject.GetComponent<Rigidbody2D>().bodyType.ToString();
+            bool handledCorrectly = Movement.CheckMovementStatus(gameObjectTag, hitBodyType);
+            if(!handledCorrectly)
+            {
+                // Game will terminate if something went wrong
+                FindObjectOfType<GameManager>().EndGame();
+            }
         }
         
     }

@@ -15,6 +15,7 @@ TagManager:
   - MovableObject
   - Canvas
   - Scoring
+  - Border
   layers:
   - Default
   - TransparentFX

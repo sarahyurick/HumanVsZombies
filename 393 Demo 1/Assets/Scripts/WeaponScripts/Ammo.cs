@@ -17,7 +17,7 @@ public class Ammo : MonoBehaviour
 
     private void Awake()
     {
-        ammo = new AmmoObject();
+        ammo = new AmmoObject(damage);
     }
 
     void Update()
@@ -67,6 +67,13 @@ public class Ammo : MonoBehaviour
 }
 
 public class AmmoObject {
+
+    public int damage;
+
+    public AmmoObject(int damage)
+    {
+        this.damage = damage;
+    }
 
     public bool HitZombie(string tag)
     {

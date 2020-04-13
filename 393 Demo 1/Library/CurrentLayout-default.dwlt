@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 394}
+  m_MinSize: {x: 950, y: 372}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -44,10 +44,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 741
-  m_MinSize: {x: 581, y: 344}
-  m_MaxSize: {x: 12006, y: 8044}
+  m_MinSize: {x: 681, y: 322}
+  m_MaxSize: {x: 12006, y: 8022}
   vertical: 0
-  controlID: 57
+  controlID: 99
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -67,8 +67,8 @@ MonoBehaviour:
     y: 0
     width: 406
     height: 741
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 341
     height: 386
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 386
     width: 1130
     height: 355
-  m_MinSize: {x: 102, y: 122}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 16}
@@ -150,7 +150,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 791
-  m_MinSize: {x: 950, y: 394}
+  m_MinSize: {x: 950, y: 372}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -216,10 +216,10 @@ MonoBehaviour:
     y: 0
     width: 1130
     height: 741
-  m_MinSize: {x: 306, y: 344}
-  m_MaxSize: {x: 8006, y: 8044}
+  m_MinSize: {x: 404, y: 322}
+  m_MaxSize: {x: 8004, y: 8022}
   vertical: 1
-  controlID: 58
+  controlID: 100
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,10 +241,10 @@ MonoBehaviour:
     y: 0
     width: 1130
     height: 386
-  m_MinSize: {x: 306, y: 222}
-  m_MaxSize: {x: 8006, y: 4022}
+  m_MinSize: {x: 404, y: 222}
+  m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 59
+  controlID: 101
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,17 +264,17 @@ MonoBehaviour:
     y: 0
     width: 789
     height: 386
-  m_MinSize: {x: 104, y: 122}
+  m_MinSize: {x: 204, y: 222}
   m_MaxSize: {x: 4004, y: 4022}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
   - {fileID: 15}
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 4
-  m_LastSelected: 1
+  m_Selected: 0
+  m_LastSelected: 4
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,7 +309,7 @@ MonoBehaviour:
       name: 393 Demo 1
       fullName: 393 Demo 1
       resultStatus: 1
-      duration: 0.3517246
+      duration: 0.3800388
       messages: 
       output: 
       stacktrace: 
@@ -325,7 +325,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/Sarah/Desktop/Unity Test/HumanVsZombies/393 Demo 1/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.2672432
+      duration: 0.2816688
       messages: 
       output: 
       stacktrace: 
@@ -341,7 +341,7 @@ MonoBehaviour:
       name: CollisionTests
       fullName: CollisionTests
       resultStatus: 1
-      duration: 0.0554284
+      duration: 0.0695139
       messages: 
       output: 
       stacktrace: 
@@ -354,11 +354,164 @@ MonoBehaviour:
       parentUniqueId: '[C:/Users/Sarah/Desktop/Unity Test/HumanVsZombies/393 Demo
         1/Library/ScriptAssemblies/Tests.dll][suite]'
     - id: 1002
-      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.PCT1_PressingWMovesPlayerUp]
-      name: PCT1_PressingWMovesPlayerUp
-      fullName: CollisionTests.PCT1_PressingWMovesPlayerUp
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT1_PlayerLosesHealthWithZombieCollision]
+      name: CT1_PlayerLosesHealthWithZombieCollision
+      fullName: CollisionTests.CT1_PlayerLosesHealthWithZombieCollision
       resultStatus: 1
-      duration: 0.0190435
+      duration: 0.0202557
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1005
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT10_ZombieHealthDecreasesWithAmmoCollision]
+      name: CT10_ZombieHealthDecreasesWithAmmoCollision
+      fullName: CollisionTests.CT10_ZombieHealthDecreasesWithAmmoCollision
+      resultStatus: 1
+      duration: 0.0007294
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1003
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT2_PlayerUpdatesMovableObjectPosition]
+      name: CT2_PlayerUpdatesMovableObjectPosition
+      fullName: CollisionTests.CT2_PlayerUpdatesMovableObjectPosition
+      resultStatus: 1
+      duration: 0.0014762
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1004
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT3_PlayerCannotWalkThroughBuildings]
+      name: CT3_PlayerCannotWalkThroughBuildings
+      fullName: CollisionTests.CT3_PlayerCannotWalkThroughBuildings
+      resultStatus: 1
+      duration: 0.0004616
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1005
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT4_ZombieUpdatesMovableObjectPosition]
+      name: CT4_ZombieUpdatesMovableObjectPosition
+      fullName: CollisionTests.CT4_ZombieUpdatesMovableObjectPosition
+      resultStatus: 1
+      duration: 0.0004045
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1006
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT5_ZombieCannotWalkThroughBuildings]
+      name: CT5_ZombieCannotWalkThroughBuildings
+      fullName: CollisionTests.CT5_ZombieCannotWalkThroughBuildings
+      resultStatus: 1
+      duration: 0.0005676
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1005
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT6_MovableObjectCannotMoveThroughBuildings]
+      name: CT6_MovableObjectCannotMoveThroughBuildings
+      fullName: CollisionTests.CT6_MovableObjectCannotMoveThroughBuildings
+      resultStatus: 1
+      duration: 0.0004246
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1006
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT7_NothingCanLeaveBoundary]
+      name: CT7_NothingCanLeaveBoundary
+      fullName: CollisionTests.CT7_NothingCanLeaveBoundary
+      resultStatus: 1
+      duration: 0.0005014
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1003
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT8_PlayerPicksUpWeaponUponCollision]
+      name: CT8_PlayerPicksUpWeaponUponCollision
+      fullName: CollisionTests.CT8_PlayerPicksUpWeaponUponCollision
+      resultStatus: 1
+      duration: 0.000762
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CollisionTests][suite]
+    - id: 1004
+      uniqueId: Tests.dll/CollisionTests/[Tests][CollisionTests.CT9_ArmedPlayerCannotPickUpWeapon]
+      name: CT9_ArmedPlayerCannotPickUpWeapon
+      fullName: CollisionTests.CT9_ArmedPlayerCannotPickUpWeapon
+      resultStatus: 1
+      duration: 0.000441
       messages: 
       output: 
       stacktrace: 
@@ -375,7 +528,7 @@ MonoBehaviour:
       name: GameStatusTests
       fullName: GameStatusTests
       resultStatus: 1
-      duration: 0.0153263
+      duration: 0.0165535
       messages: 
       output: 
       stacktrace: 
@@ -392,7 +545,7 @@ MonoBehaviour:
       name: GST1_ZombieKillIncreasesPlayerScore
       fullName: GameStatusTests.GST1_ZombieKillIncreasesPlayerScore
       resultStatus: 1
-      duration: 0.0025667
+      duration: 0.001767
       messages: 
       output: 
       stacktrace: 
@@ -409,7 +562,7 @@ MonoBehaviour:
       name: GST2_GameplayTimeIncreasesPlayerScore
       fullName: GameStatusTests.GST2_GameplayTimeIncreasesPlayerScore
       resultStatus: 1
-      duration: 0.0006751
+      duration: 0.00163
       messages: 
       output: 
       stacktrace: 
@@ -426,7 +579,7 @@ MonoBehaviour:
       name: GST3_NewWaveSpawnsNewWeaponOnMap
       fullName: GameStatusTests.GST3_NewWaveSpawnsNewWeaponOnMap
       resultStatus: 1
-      duration: 0.0008714
+      duration: 0.0011209
       messages: 
       output: 
       stacktrace: 
@@ -443,7 +596,7 @@ MonoBehaviour:
       name: GST4_GameOverMenuAppearsWhenPlayerHealthReachesZero
       fullName: GameStatusTests.GST4_GameOverMenuAppearsWhenPlayerHealthReachesZero
       resultStatus: 1
-      duration: 0.0008029
+      duration: 0.0006254
       messages: 
       output: 
       stacktrace: 
@@ -460,7 +613,7 @@ MonoBehaviour:
       name: GST4_HighscoresUpdateProperly
       fullName: GameStatusTests.GST4_HighscoresUpdateProperly
       resultStatus: 1
-      duration: 0.001715
+      duration: 0.0017931
       messages: 
       output: 
       stacktrace: 
@@ -477,7 +630,7 @@ MonoBehaviour:
       name: PlayerControllerTests
       fullName: PlayerControllerTests
       resultStatus: 1
-      duration: 0.0261438
+      duration: 0.0252705
       messages: 
       output: 
       stacktrace: 
@@ -494,7 +647,7 @@ MonoBehaviour:
       name: PCT1_PressingAMovesPlayerLeft
       fullName: PlayerControllerTests.PCT1_PressingAMovesPlayerLeft
       resultStatus: 1
-      duration: 0.0008631
+      duration: 0.0028646
       messages: 
       output: 
       stacktrace: 
@@ -511,7 +664,7 @@ MonoBehaviour:
       name: PCT1_PressingDMovesPlayerRight
       fullName: PlayerControllerTests.PCT1_PressingDMovesPlayerRight
       resultStatus: 1
-      duration: 0.0004557
+      duration: 0.0004835
       messages: 
       output: 
       stacktrace: 
@@ -528,7 +681,7 @@ MonoBehaviour:
       name: PCT1_PressingSMovesPlayerDown
       fullName: PlayerControllerTests.PCT1_PressingSMovesPlayerDown
       resultStatus: 1
-      duration: 0.0005946
+      duration: 0.0003868
       messages: 
       output: 
       stacktrace: 
@@ -545,7 +698,7 @@ MonoBehaviour:
       name: PCT1_PressingWMovesPlayerUp
       fullName: PlayerControllerTests.PCT1_PressingWMovesPlayerUp
       resultStatus: 1
-      duration: 0.0003646
+      duration: 0.0003802
       messages: 
       output: 
       stacktrace: 
@@ -562,7 +715,7 @@ MonoBehaviour:
       name: PCT2_MovingMouseDownAimsCrossHairDown
       fullName: PlayerControllerTests.PCT2_MovingMouseDownAimsCrossHairDown
       resultStatus: 1
-      duration: 0.0007648
+      duration: 0.0007923
       messages: 
       output: 
       stacktrace: 
@@ -579,7 +732,7 @@ MonoBehaviour:
       name: PCT2_MovingMouseLeftAimsCrossHairLeft
       fullName: PlayerControllerTests.PCT2_MovingMouseLeftAimsCrossHairLeft
       resultStatus: 1
-      duration: 0.0003641
+      duration: 0.0003786
       messages: 
       output: 
       stacktrace: 
@@ -596,7 +749,7 @@ MonoBehaviour:
       name: PCT2_MovingMouseRightAimsCrossHairRight
       fullName: PlayerControllerTests.PCT2_MovingMouseRightAimsCrossHairRight
       resultStatus: 1
-      duration: 0.0004345
+      duration: 0.0003699
       messages: 
       output: 
       stacktrace: 
@@ -613,7 +766,7 @@ MonoBehaviour:
       name: PCT2_MovingMouseUpAimsCrossHairUp
       fullName: PlayerControllerTests.PCT2_MovingMouseUpAimsCrossHairUp
       resultStatus: 1
-      duration: 0.0007798
+      duration: 0.0005043
       messages: 
       output: 
       stacktrace: 
@@ -630,7 +783,7 @@ MonoBehaviour:
       name: PCT3_AmmoDecrementsAfterShooting
       fullName: PlayerControllerTests.PCT3_AmmoDecrementsAfterShooting
       resultStatus: 1
-      duration: 0.0015789
+      duration: 0.0008315
       messages: 
       output: 
       stacktrace: 
@@ -647,7 +800,7 @@ MonoBehaviour:
       name: PCT3_AmmoLaunchedInDirectionOfFiring
       fullName: PlayerControllerTests.PCT3_AmmoLaunchedInDirectionOfFiring
       resultStatus: 1
-      duration: 0.0026251
+      duration: 0.0025417
       messages: 
       output: 
       stacktrace: 
@@ -664,7 +817,7 @@ MonoBehaviour:
       name: PCT3_PlayerDropsWeaponAfterDrainingIt
       fullName: PlayerControllerTests.PCT3_PlayerDropsWeaponAfterDrainingIt
       resultStatus: 1
-      duration: 0.0009692
+      duration: 0.0007914
       messages: 
       output: 
       stacktrace: 
@@ -681,7 +834,7 @@ MonoBehaviour:
       name: Tests
       fullName: Tests
       resultStatus: 1
-      duration: 0.0798081
+      duration: 0.0797965
       messages: 
       output: 
       stacktrace: 
@@ -698,7 +851,7 @@ MonoBehaviour:
       name: TestSuite
       fullName: Tests.TestSuite
       resultStatus: 1
-      duration: 0.0691942
+      duration: 0.0683314
       messages: 
       output: 
       stacktrace: 
@@ -714,7 +867,7 @@ MonoBehaviour:
       name: onePlusOneEqualsTwo
       fullName: Tests.TestSuite.onePlusOneEqualsTwo
       resultStatus: 1
-      duration: 0.000514
+      duration: 0.0007382
       messages: 
       output: 
       stacktrace: 
@@ -731,7 +884,7 @@ MonoBehaviour:
       name: TestSuiteSimplePasses
       fullName: Tests.TestSuite.TestSuiteSimplePasses
       resultStatus: 1
-      duration: 0.0003559
+      duration: 0.0003687
       messages: 
       output: 
       stacktrace: 
@@ -748,7 +901,7 @@ MonoBehaviour:
       name: TestSuiteWithEnumeratorPasses
       fullName: Tests.TestSuite.TestSuiteWithEnumeratorPasses
       resultStatus: 1
-      duration: 0.0491718
+      duration: 0.0482748
       messages: 
       output: 
       stacktrace: 
@@ -765,7 +918,7 @@ MonoBehaviour:
       name: UITests
       fullName: UITests
       resultStatus: 1
-      duration: 0.0185162
+      duration: 0.0169393
       messages: 
       output: 
       stacktrace: 
@@ -782,7 +935,7 @@ MonoBehaviour:
       name: UIT1_MainMenuToGameplay
       fullName: UITests.UIT1_MainMenuToGameplay
       resultStatus: 1
-      duration: 0.0006913
+      duration: 0.0010138
       messages: 
       output: 
       stacktrace: 
@@ -799,7 +952,7 @@ MonoBehaviour:
       name: UIT10_PauseMenuToGameplay
       fullName: UITests.UIT10_PauseMenuToGameplay
       resultStatus: 1
-      duration: 0.0005222
+      duration: 0.0006381
       messages: 
       output: 
       stacktrace: 
@@ -816,7 +969,7 @@ MonoBehaviour:
       name: UIT12_PauseMenuToMainMenu
       fullName: UITests.UIT12_PauseMenuToMainMenu
       resultStatus: 1
-      duration: 0.0006623
+      duration: 0.0004608
       messages: 
       output: 
       stacktrace: 
@@ -833,7 +986,7 @@ MonoBehaviour:
       name: UIT13_GameOverMenuToMainMenu
       fullName: UITests.UIT13_GameOverMenuToMainMenu
       resultStatus: 1
-      duration: 0.0004364
+      duration: 0.0005166
       messages: 
       output: 
       stacktrace: 
@@ -850,7 +1003,7 @@ MonoBehaviour:
       name: UIT14_GameOverMenuToQuit
       fullName: UITests.UIT14_GameOverMenuToQuit
       resultStatus: 1
-      duration: 0.0005064
+      duration: 0.0005577
       messages: 
       output: 
       stacktrace: 
@@ -867,7 +1020,7 @@ MonoBehaviour:
       name: UIT3_MainMenuToHighscores
       fullName: UITests.UIT3_MainMenuToHighscores
       resultStatus: 1
-      duration: 0.0005461
+      duration: 0.0004555
       messages: 
       output: 
       stacktrace: 
@@ -884,7 +1037,7 @@ MonoBehaviour:
       name: UIT7_HighscoresToMainMenu
       fullName: UITests.UIT7_HighscoresToMainMenu
       resultStatus: 1
-      duration: 0.0005103
+      duration: 0.0005311
       messages: 
       output: 
       stacktrace: 
@@ -901,7 +1054,7 @@ MonoBehaviour:
       name: UIT8_ResettingHighscores
       fullName: UITests.UIT8_ResettingHighscores
       resultStatus: 1
-      duration: 0.0008495
+      duration: 0.0005112
       messages: 
       output: 
       stacktrace: 
@@ -918,7 +1071,7 @@ MonoBehaviour:
       name: UIT9_PausingGame
       fullName: UITests.UIT9_PausingGame
       resultStatus: 1
-      duration: 0.0004831
+      duration: 0.0003481
       messages: 
       output: 
       stacktrace: 
@@ -935,7 +1088,7 @@ MonoBehaviour:
       name: ZombieTests
       fullName: ZombieTests
       resultStatus: 1
-      duration: 0.0184813
+      duration: 0.0131282
       messages: 
       output: 
       stacktrace: 
@@ -952,7 +1105,7 @@ MonoBehaviour:
       name: ZCT1_ZombiesSpawnWithNewGame
       fullName: ZombieTests.ZCT1_ZombiesSpawnWithNewGame
       resultStatus: 1
-      duration: 0.0073415
+      duration: 0.0035414
       messages: 
       output: 
       stacktrace: 
@@ -969,7 +1122,7 @@ MonoBehaviour:
       name: ZCT2_ZombiesSpawnWithNewWave
       fullName: ZombieTests.ZCT2_ZombiesSpawnWithNewWave
       resultStatus: 1
-      duration: 0.0011803
+      duration: 0.0008187
       messages: 
       output: 
       stacktrace: 
@@ -986,7 +1139,7 @@ MonoBehaviour:
       name: ZCT3_ZombiesMove
       fullName: ZombieTests.ZCT3_ZombiesMove
       resultStatus: 1
-      duration: 0.0012905
+      duration: 0.0010181
       messages: 
       output: 
       stacktrace: 
@@ -1003,7 +1156,7 @@ MonoBehaviour:
       name: ZCT4_ZombiesDiesWhenHealthReachesZero
       fullName: ZombieTests.ZCT4_ZombiesDiesWhenHealthReachesZero
       resultStatus: 1
-      duration: 0.0009696
+      duration: 0.0008103
       messages: 
       output: 
       stacktrace: 
@@ -1021,7 +1174,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1331f01ae1b39d1ca4c0c326aac44b394f94824a6ad8d74bffffff7f
+      m_ExpandedIDs: 1331f01ae1b39d1caac44b394f94824affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1377,20 +1530,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/UIScripts
+    - Assets/Tests
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/UIScripts
+  - Assets/Tests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Sarah\Desktop\Unity Test\HumanVsZombies\393 Demo 1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 32}
+    scrollPos: {x: 0, y: 256}
     m_SelectedIDs: 9c330000
     m_LastClickedID: 13212
-    m_ExpandedIDs: 000000000c2e0000ea2e000082310000ea320000f632000000330000903300000034000002340000943b000000ca9a3b
+    m_ExpandedIDs: 000000000c2e00005e2e0000ea2e00008a310000f2320000fe32000008330000303300009c3300000e3400001034000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1418,7 +1571,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c2e0000ea2e000082310000f63200000033000000340000
+    m_ExpandedIDs: 000000000c2e0000ea2e00008a310000f2320000fe32000008330000303300009c3300000e34000010340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1443,8 +1596,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 28280000
+    m_LastClickedInstanceID: 10280
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004a2e000004330000263b00007e2f0000d63e00006e3200001c370000000000002a2f0000fe2d000094360000403a0000
     m_RenameOverlay:
@@ -1543,7 +1696,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 149dffff3a9dffffd49effff32a0ffff58a0fffffaa1ffffa2a3ffffc8a3ffff62a5ffff0aa7ffff30a7ffffcaa8ffff72aaffff98aaffff2aacffffd0adfffff4adffff22aeffff70b1ffff96b1ffff18b3ffffc0b4ffffe6b4ffff70b6ffff62b8ffff88b8ffff02baffffaabbffffd0bbffff5abdffff14bfffff3abfffffb4c0ffff64c2ffff8ac2ffff04c4ffff0cc6ffff32c6ffff94c7fffffec8ffff24c9ffff86caffff86ceffff4ecfffff9ad2ffffc0d2ffff1ad4ffff88d4ffffaed4ffff00d6ffff2cd7ffff52d7ffff9cd8ffff14d9ffff3ad9ffff84daffff30dcffff56dcffff90ddffff04deffff2adeffff64dfffff3ee1ffff64e1ffff9ee2ffff94e6ffffbae6fffff4e7ffff4ce9ffff7ce9ffffa0e9ffffcee9ffff50eaffffd8eaffff00ebffff64ebffffc4eeffffb8f0ffffdef0ffff20f2ffffd4f3fffffaf3ffff5cf5ffffbaf6ffffe0f6ffff46f8ffff64fbffff7e450000a64500005c47000066470000844700000c48000088480000b048000076490000364a00009c4c0000ae540000d6540000c85c0000165d0000865d0000925d0000
+      m_ExpandedIDs: ccfefdfff2fefdffd400feff028affff288affff0a8cffff1c8effffe48effff0a8fffffcc90ffff7c92ffffa292ffff6494ffff78f2ffff40f3ffff66f3ffff18f5ffffd6f6fffffcf6ffffaaf8ffff72fbffff3e3e0000543e0000583e00006a3e0000983e0000503f0000cc64000048650000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
