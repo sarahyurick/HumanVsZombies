@@ -7,6 +7,8 @@ ScriptsOnlyBuild:
     - LeaderboardScript
     - LoadSceneAfterVideoEnded
     - MainMenu
+    - MusicClass
+    - MusicUI
     - PauseMenu
     - PlayerController
     - PlayerHealthBar
@@ -33,6 +35,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRunnerWindow
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
@@ -43,6 +46,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/GameOver.unity:
     - Class: 1
@@ -59,6 +63,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -66,17 +74,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 9904}
+      Script: {instanceID: 9906}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10712}
     - Class: 114
-      Script: {instanceID: 11194}
+      Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11578}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11630}
+      Script: {instanceID: 11632}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -116,6 +124,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -127,33 +139,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 9904}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10014}
+      Script: {instanceID: 9906}
     - Class: 114
-      Script: {instanceID: 10280}
+      Script: {instanceID: 10016}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 10282}
     - Class: 114
-      Script: {instanceID: 10390}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 10606}
+      Script: {instanceID: 10392}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 11090}
+      Script: {instanceID: 10712}
     - Class: 114
-      Script: {instanceID: 11194}
+      Script: {instanceID: 11092}
     - Class: 114
-      Script: {instanceID: 11198}
+      Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11208}
+      Script: {instanceID: 11200}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 11210}
     - Class: 114
-      Script: {instanceID: 11578}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11612}
+      Script: {instanceID: 11580}
+    - Class: 114
+      Script: {instanceID: 11596}
+    - Class: 114
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 18098}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -198,17 +216,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 9904}
-    - Class: 114
       Script: {instanceID: 9906}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 9908}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 11194}
+      Script: {instanceID: 10712}
     - Class: 114
-      Script: {instanceID: 11578}
+      Script: {instanceID: 11196}
+    - Class: 114
+      Script: {instanceID: 11580}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -244,6 +262,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 109
@@ -253,29 +275,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 9904}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10134}
+      Script: {instanceID: 9906}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 10136}
     - Class: 114
-      Script: {instanceID: 10348}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10350}
     - Class: 114
-      Script: {instanceID: 10936}
+      Script: {instanceID: 10712}
     - Class: 114
-      Script: {instanceID: 10950}
+      Script: {instanceID: 10938}
     - Class: 114
-      Script: {instanceID: 11024}
+      Script: {instanceID: 10952}
     - Class: 114
-      Script: {instanceID: 11132}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 11194}
+      Script: {instanceID: 11134}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11578}
+      Script: {instanceID: 11368}
+    - Class: 114
+      Script: {instanceID: 11580}
+    - Class: 114
+      Script: {instanceID: 11596}
+    - Class: 114
+      Script: {instanceID: 18098}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -349,6 +377,12 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
+      Hash: 54b5ccfaacefa4a6b118e5f3ee918046
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: MusicClass
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -403,7 +437,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: d5aeb71a107efb78fe9ae85ffb628e51
+      Hash: 3b1a6623b02c44f4e32bb20a69300ffd
     assemblyName: GameAssembly.dll
     namespaceName: 
     className: Ammo
@@ -679,7 +713,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 8f1e5d8e1a3e1f859f821009faba1201
+      Hash: 6fdf60535bc1a4f468cadad11535cf1a
     assemblyName: GameAssembly.dll
     namespaceName: 
     className: PlayerController
@@ -791,6 +825,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 7f486e73d34f888c9a88c3461966872c
+    assemblyName: GameAssembly.dll
+    namespaceName: 
+    className: MusicUI
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

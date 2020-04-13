@@ -46,6 +46,15 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        if (PlayerPrefs.GetInt("Sound", 0) != 0 && PlayerPrefs.GetInt("Sound", 0) != 1)
+        {
+            PlayerPrefs.SetInt("Sound", 1);
+        }
+        if (PlayerPrefs.GetInt("Music", 0) != 0 && PlayerPrefs.GetInt("Music", 0) != 1)
+        {
+            PlayerPrefs.SetInt("Music", 0);
+        }
+
         PlayerPrefs.SetInt("Paused", 0);
         player = new Player();
         playerHealthBar.SetMaxHealth(player.MAX_HEALTH);

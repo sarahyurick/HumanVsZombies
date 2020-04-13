@@ -16,9 +16,16 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void LoadSettings()
+    public void CheckAudio()
     {
-        SceneManager.LoadScene("Settings");
+        if (PlayerPrefs.GetInt("Sound", 0) != 0 && PlayerPrefs.GetInt("Sound", 0) != 1)
+        {
+            PlayerPrefs.SetInt("Sound", 1);
+        }
+        if (PlayerPrefs.GetInt("Music", 0) != 0 && PlayerPrefs.GetInt("Music", 0) != 1)
+        {
+            PlayerPrefs.SetInt("Music", 0);
+        }
     }
 
     public void Exit ()
