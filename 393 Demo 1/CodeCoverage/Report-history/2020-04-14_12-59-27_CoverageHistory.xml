@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2020-04-14_12-59-27" tag="">
+  <assembly name="GameAssembly">
+    <class name="Aim" coveredlines="7" coverablelines="10" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Ammo" coveredlines="0" coverablelines="41" totallines="89" coveredbranches="0" totalbranches="0" />
+    <class name="AmmoObject" coveredlines="9" coverablelines="10" totallines="89" coveredbranches="0" totalbranches="0" />
+    <class name="GameManager" coveredlines="0" coverablelines="77" totallines="169" coveredbranches="0" totalbranches="0" />
+    <class name="GameOverMenu" coveredlines="0" coverablelines="16" totallines="31" coveredbranches="0" totalbranches="0" />
+    <class name="GameStatus" coveredlines="77" coverablelines="77" totallines="115" coveredbranches="0" totalbranches="0" />
+    <class name="LeaderboardScript" coveredlines="0" coverablelines="17" totallines="30" coveredbranches="0" totalbranches="0" />
+    <class name="LoadSceneAfterVideoEnded" coveredlines="0" coverablelines="14" totallines="32" coveredbranches="0" totalbranches="0" />
+    <class name="MainMenu" coveredlines="0" coverablelines="21" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="Movement" coveredlines="46" coverablelines="46" totallines="69" coveredbranches="0" totalbranches="0" />
+    <class name="MusicClass" coveredlines="14" coverablelines="44" totallines="91" coveredbranches="0" totalbranches="0" />
+    <class name="PauseMenu" coveredlines="0" coverablelines="34" totallines="59" coveredbranches="0" totalbranches="0" />
+    <class name="Player" coveredlines="53" coverablelines="63" totallines="98" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerController" coveredlines="0" coverablelines="118" totallines="213" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerHealthBar" coveredlines="0" coverablelines="7" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerScore" coveredlines="0" coverablelines="69" totallines="115" coveredbranches="0" totalbranches="0" />
+    <class name="Shoot" coveredlines="14" coverablelines="14" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="UIManager" coveredlines="91" coverablelines="104" totallines="155" coveredbranches="0" totalbranches="0" />
+    <class name="Weapon" coveredlines="34" coverablelines="55" totallines="80" coveredbranches="0" totalbranches="0" />
+    <class name="WeaponHealthBar" coveredlines="0" coverablelines="7" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="Zombie" coveredlines="23" coverablelines="27" totallines="42" coveredbranches="0" totalbranches="0" />
+    <class name="ZombieMovement" coveredlines="0" coverablelines="30" totallines="58" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Tests">
+    <class name="CollisionTests" coveredlines="151" coverablelines="151" totallines="217" coveredbranches="0" totalbranches="0" />
+    <class name="GameStatusTests" coveredlines="63" coverablelines="66" totallines="93" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerControllerTests" coveredlines="59" coverablelines="59" totallines="131" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.TestSuite" coveredlines="9" coverablelines="9" totallines="149" coveredbranches="0" totalbranches="0" />
+    <class name="UITests" coveredlines="83" coverablelines="85" totallines="140" coveredbranches="0" totalbranches="0" />
+    <class name="ZombieTests" coveredlines="32" coverablelines="35" totallines="61" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

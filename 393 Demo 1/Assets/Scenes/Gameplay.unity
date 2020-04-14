@@ -4298,6 +4298,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1478903515}
+  newGame: 0
+  MusicToggle: {fileID: 679465464}
+  SoundToggle: {fileID: 224061526}
 --- !u!4 &1478903517
 Transform:
   m_ObjectHideFlags: 0
