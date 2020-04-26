@@ -47,7 +47,7 @@ public class Ammo : MonoBehaviour
             {
                 string tag = other.tag;
                 if (ammo.HitZombie(tag)) {
-                    ZombieHitAudio.Play();
+                    // ZombieHitAudio.Play();
                     ZombieMovement zombieController = other.GetComponent<ZombieMovement>();
                     zombieController.zombie.UpdateHealth(damage);
                 }

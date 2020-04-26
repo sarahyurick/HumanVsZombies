@@ -16,15 +16,12 @@ ScriptsOnlyBuild:
     - ZombieMovement
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TestTools.CodeCoverage.Editor.dll:
     - UnityEditor.TestTools.CodeCoverage.CodeCoverageWindow
-    - UnityEditor.TestTools.CodeCoverage.CoverageRunData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -835,5 +832,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/IntroVideo.unity
   - Assets/Scenes/Gameplay.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: C:/Users/Sarah/Desktop/Unity Test/HumanVsZombies/393 Demo 1/393 Demo
-    1.exe
+  playerPath: C:/Users/Sarah/Desktop/Unity Test/HumanVsZombies/Play/393 Demo 1.exe

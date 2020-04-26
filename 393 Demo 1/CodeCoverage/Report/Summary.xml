@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>4/14/2020 - 12:59:30 PM</Generatedon>
-    <Parser>MultiReportParser (1x CoberturaParser, 1x OpenCoverParser)</Parser>
+    <Generatedon>4/15/2020 - 10:18:45 AM</Generatedon>
+    <Parser>MultiReportParser (3x CoberturaParser, 1x OpenCoverParser)</Parser>
     <Assemblies>2</Assemblies>
     <Classes>28</Classes>
     <Files>27</Files>
-    <Coveredlines>765</Coveredlines>
-    <Uncoveredlines>541</Uncoveredlines>
+    <Coveredlines>767</Coveredlines>
+    <Uncoveredlines>539</Uncoveredlines>
     <Coverablelines>1306</Coverablelines>
     <Totallines>2365</Totallines>
-    <Linecoverage>58.5</Linecoverage>
+    <Linecoverage>58.7</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
   <Coverage>
-    <Assembly name="GameAssembly" classes="22" coverage="40.8" coveredlines="368" coverablelines="901" totallines="1663" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="GameAssembly" classes="22" coverage="41" coveredlines="370" coverablelines="901" totallines="1663" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="Aim" coverage="70" coveredlines="7" coverablelines="10" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Ammo" coverage="0" coveredlines="0" coverablelines="41" totallines="89" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="AmmoObject" coverage="90" coveredlines="9" coverablelines="10" totallines="89" branchcoverage="" coveredbranches="0" totalbranches="0" />
@@ -26,7 +26,7 @@
       <Class name="LoadSceneAfterVideoEnded" coverage="0" coveredlines="0" coverablelines="14" totallines="32" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="MainMenu" coverage="0" coveredlines="0" coverablelines="21" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Movement" coverage="100" coveredlines="46" coverablelines="46" totallines="69" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="MusicClass" coverage="31.8" coveredlines="14" coverablelines="44" totallines="91" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MusicClass" coverage="36.3" coveredlines="16" coverablelines="44" totallines="91" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="PauseMenu" coverage="0" coveredlines="0" coverablelines="34" totallines="59" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Player" coverage="84.1" coveredlines="53" coverablelines="63" totallines="98" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="PlayerController" coverage="0" coveredlines="0" coverablelines="118" totallines="213" branchcoverage="" coveredbranches="0" totalbranches="0" />
